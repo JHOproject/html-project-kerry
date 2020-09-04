@@ -1,0 +1,307 @@
+@import url(./@reset.css);
+
+html{
+    min-width: 1920px;
+  }
+
+h1.topic{
+    font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+    font-size: 50px;
+    font-weight: 700;
+    color: #ff4400;
+    letter-spacing: 2px;
+  }
+  
+  h2{
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  
+  h3{
+    font-size: 28px;
+    font-weight: 700;
+    color: black;
+  }
+  
+  h4{
+    font-size: 23px;
+    color: black;
+    font-weight: 400;
+  }
+  
+  h5{
+    font-size: 21px;
+    color: black;
+    font-weight: 400;
+  }
+  
+  p.intro{
+    font-size: 16px;
+    width: 1200px;
+    line-height: 30px;
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+a:hover, button:hover{
+    cursor: pointer;
+}
+
+li.multiple:hover{
+    cursor: pointer;    
+}
+
+
+nav{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+nav ul.top_nav{
+    background-color: rgba(255, 255, 255, .98);  
+    width: 100%;
+    min-width: 1500px;
+    height: 106px;
+    text-align: center;
+    box-shadow: 0 -5px 20px 0 rgba(0, 0, 0, .16);
+}
+
+nav ul.top_nav > li{
+    height: 50px;
+    display: inline-block;
+    color: #ff4400;
+    margin: auto 20px;
+}
+
+nav ul.top_nav > li > a, nav ul.top_nav li.multiple,nav ul.top_nav li.multiple ul.multiple li a{
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+
+nav ul.top_nav li.logo a{
+    display: inline-block;
+    width: 62px;
+    height: 58px;
+    position: relative;
+    top: 20px;
+    margin-left: 10px;
+    background-color:rgba(0, 0, 0, .5);
+}
+
+nav ul.top_nav li.nav_icon{
+    margin: auto 0;
+    position: relative;
+    left: 150px;
+    top: 20px;
+}
+
+nav ul.top_nav li.nav_icon a{
+    display: inline-block;
+    outline: 1px solid white;
+    width: 62px;
+    height: 58px;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+nav ul.top_nav li.multiple{
+    position: relative;
+}
+
+
+nav ul.top_nav li.multiple ul.multiple{
+    display: inline-block;
+    width: 450px;
+    height: 725px;
+    text-align: left;
+    line-height: 35px;
+    border-top: 10px solid #ff4400;
+    border-bottom: 10px solid #ff4400;
+    background-color: #fff;
+    box-shadow: 5px 0 5px rgba(0, 0, 0, .16);
+    position: absolute;
+    top: 30px;
+    left: 0;
+    display: none;
+}
+
+nav ul.top_nav li.multiple ul.nav_link2{
+    height: 600px;
+}
+
+nav ul.top_nav li.multiple ul.multiple li{
+    display: inline-block;
+    width: 100%;
+    height: 35px;
+}
+
+nav ul.top_nav li.multiple  ul.multiple li a{
+    display: inline-block;
+    width: 100%;
+    height: 35px;
+    text-decoration: none;
+    color: rgb(60, 60, 60);
+}
+
+nav ul.top_nav li.multiple ul.multiple li.multiple_title a{
+    padding-left: 40px;
+    font-weight: 700;
+}
+
+nav ul.top_nav li.multiple ul.multiple li.multiple_item a{
+    padding-left: 80px;
+}
+
+nav ul.top_nav li.multiple:hover > ul{
+    display: inline-block;
+    text-shadow: none;
+}
+
+nav ul.top_nav li:hover > a, nav ul.top_nav li.multiple:hover{
+    color:rgb(0, 0, 0);
+    text-shadow: 0 3px 3px grey;
+}
+
+nav ul.top_nav li.multiple ul.multiple li:hover{
+    background-color: rgb(255, 68, 0);
+    cursor: pointer;
+}
+
+nav ul.top_nav li.multiple ul.multiple li a:hover{
+    color: white;
+    text-shadow: none;
+}
+
+
+nav div.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    opacity: 0;
+    z-index: -2;
+    transition: opacity 1s;
+  }
+
+nav  div.overlay.-on{
+    opacity: 1;
+    z-index: 1;
+  }
+  
+nav  div.overlay.-opacity-zero{
+    opacity: 0;
+  }
+  
+nav  div.overlay > article{
+    background-color: white;
+    width: 100%;
+    max-width: 1000px;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, .16);
+    padding: 10px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+  }
+
+nav  div.overlay > article div h1, nav  div.overlay > article div > p{
+    text-align: center;
+    letter-spacing: 3px;
+    width: 100%;
+  }
+
+nav  div.overlay > article div h1{
+  color: white;
+  font-size: 28px;
+  padding: 8px;
+  margin: 40px 0 5px;
+  background-color: #ff4400;
+}
+
+nav  div.overlay > article div form{
+  padding: 0 20px;
+  border: 1px solid red;
+  margin: 30px auto;
+}
+
+nav  div.overlay > article div form div.input_group{
+  border: 1px solid red;
+  padding-left: 80px; 
+}
+
+nav  div.overlay > article div form select{
+    width: 50%;
+    border: 1px solid rgb(190, 190, 190);
+    font-size: 20px !important;
+    margin-bottom: 20px;
+}
+
+nav  div.overlay > article div form div label{
+    border: 1px solid red;
+    display: inline-block;
+    /* border: 1px solid blue; */
+    width: 120px;
+    font-size: 20px;
+  }
+
+nav  div.overlay > article div form div label[for="item_num"]{
+    width:140px;
+}
+
+
+nav  div.overlay > article div form div input{
+  width: 252px;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  margin-bottom: 20px;
+}
+
+nav  div.overlay > article div form div input#item_num{
+  width: 233px;
+}
+
+nav  div.overlay > article div form div input#email{
+  width: 350px;
+}
+
+nav  div.overlay > article div form div input.input{
+    border-bottom: 1px solid grey;  
+  }
+
+nav  div.overlay > article div form div input#fst_name, nav  div.overlay > article div form div input#city, input#email, nav  div.overlay > article div form div input#company{
+    margin-right: 60px; 
+ }
+
+ nav  div.overlay > article div form div textarea#message{
+   width: 90%;
+   height: 20vh;
+   border: 1px solid grey;
+   text-align: start;
+   padding: 0;
+   resize: vertical;
+ }
+
+nav  div.overlay > article div form div input#submit{
+    font-size: 0;
+
+}
+
+
+nav div.overlay article button{
+    border: 1px solid green;
+    font-size: 16px;
+    background-color: none;
+    outline: none;
+    /* border: none; */
+}
+
+
+
+

@@ -1,0 +1,104 @@
+footer{
+  background-color: black;
+  position: relative;
+  min-width: 1920px;
+}
+
+footer section{
+  display: inline-block;
+  margin: 130px auto 150px;
+  vertical-align: top;
+}
+
+footer section h4.footer{
+  color: rgb(194, 194, 194);
+  font-weight: 700;
+}
+
+footer section p.footer{
+  color: rgb(194, 194, 194);
+}
+
+footer section#sec1{
+  width: 350px;
+  margin-left: 350px;
+}
+
+footer section#sec1 p.footer{
+  width: 300px;
+  margin: 15px 0;
+}
+
+footer section#sec1 button pre{
+  font-size: 16px;
+  color: #ff4400;
+  text-align: left;
+  padding: 15px 15px;
+  width: 320px;
+}
+
+footer section#sec1 button{
+  border: 1px solid #ff4400;
+  border-radius: 30px;
+  background-color: transparent;
+}
+
+footer section#sec1 div{
+  margin-top: 15px;
+}
+
+footer section#sec1 div a{
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(194, 194, 194);
+}
+
+footer section#split{
+  background-color: rgb(194, 194, 194);
+  border: none;
+  width: 1px;
+  height: 200px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+footer section#sec2{
+  width: 400px;
+}
+
+footer section#sec2 h4{
+  margin-bottom: 15px;
+}
+
+footer section#sec2 p{
+  width: 400px;
+  margin-top: 5px;
+}
+
+footer section#sec3 button.button{
+  display: block;
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #ff4400;
+  padding: 15px 60px;
+  margin: 50px auto;
+  border: 1px solid #ff4400;
+  border-radius: 30px;
+  background-color: transparent;
+}
+
+footer section#sec3 button.top{
+  font-size: 36px;
+  color: white;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  background-color: #ff4400;
+  border: 1px solid #ff4400;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  top: -30px;
+  right: 300px;
+}

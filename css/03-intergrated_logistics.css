@@ -1,0 +1,114 @@
+@import url(./nav.css);
+@import url(./footer.css);
+
+p{
+    font-size: 16px;
+    width: 1000px;
+    line-height: 30px;
+    word-break: break-word;
+    hyphens: auto;
+}
+
+aside{
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+aside div{
+    background-color: rgb(246,246,246);
+    padding-top: 130px;
+    width: 100%;
+    height: 100%;
+}
+
+aside div a{
+    display: inline-block;
+    width: 100%;
+    font-size: 16px;
+    color: rgb(166, 166, 166);
+    display: block;
+    line-height: 40px;
+    padding-left: 130px;
+}
+
+aside a.title{
+    font-size: 18px;
+    color: rgb(60, 60, 60);
+    margin-top: 10px;
+    padding-left: 100px;
+}
+
+main{
+    display: inline-block;
+    min-width: 100%;
+    padding-top: 100px;
+    padding-left: 20%;
+}
+
+main section{
+    padding-top: 80px;
+}
+
+main section h3{
+    margin: 0 30px 30px 100px;
+}
+
+main section div.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+main section div.container div#p{
+    width: 1000px;
+    margin: 0 100px 30px 100px;
+}
+
+main section div.container div#p p{
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+main section div#img{
+    display: inline-block;
+    width: 300px;
+    height: 400px;
+    margin-left: 00px;
+    background-color: black;
+}
+
+main section#main_sec1 a{
+    font-size: 16px;
+    display: inline-block;
+    width: 160px;
+    height: 60px;
+    border: 3px solid #ff4400;
+    font-weight: 700;
+    color: #ff4400;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    margin-left: 100px;
+}
+
+main section#main_sec2{
+    margin: 0 auto 100px;
+}
+
+main section#main_sec2 a{
+    font-size: 23px;
+    width: 1200px;
+    display: block;
+    font-weight: 700;
+    color: #ff4400;
+    line-height: 30px;
+    padding: 30px 100px;
+    border-bottom: 1px solid  rgb(129, 129, 129);
+}
+
+footer section{
+    margin: 50px auto 50px;
+  }

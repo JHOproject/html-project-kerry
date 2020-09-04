@@ -1,0 +1,259 @@
+@import url(./nav.css);
+@import url(./footer.css);
+
+
+nav ul.top_nav{
+  position: fixed;
+  z-index: 2;
+}
+
+
+p{
+  font-size: 16px;
+  line-height: 30px;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+h1.topic{
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-weight: 400;
+}
+
+main article#article1{
+  padding-top: 150px;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/USE/05-article1_bcg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+main article#article1 div.cover{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 68, 0, .37);
+  position: absolute;
+  left: 0;
+  top: 0;
+
+}
+
+main article#article1 > div.container{
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-around;
+}
+
+main article#article1 div.container section#left{
+  width: 510px;
+  height: 315px;
+  background-color: grey;
+  margin-top: 200px;
+}
+
+
+main article#article1 div.container section#right{
+  background-color: #fff;
+  padding: 80px 90px 80px;
+}
+
+main article#article1 div.container section#right > h1.topic{
+  margin-bottom: 50px;
+}
+
+main article#article1 div.container section#right > p{
+  width: 900px;
+  margin-top: 30px;
+}
+
+main article#article1 div.container section#right div.container p{
+  width: 315px;
+  text-align: center;
+  margin-top: 10px;
+  color: rgb(122, 122, 122);
+}
+
+main article#article1 div.container section#right div.container{
+  display: flex;
+  margin: 50px auto 20px;
+}
+
+main article#article1 div.container section#right div.container a{
+  display: inline-block;
+  width: 315px;
+  height:215px;
+  background-color: grey;
+  border: 1px solid white;
+}
+
+main article#article2 section#art2_sec1{
+  background-color: rgba(246, 246, 246);
+}
+
+main article#article2 section#art2_sec1 > h1, main article#article2 section#art2_sec1 > p{
+  text-align: center;
+}
+
+main article#article2 section#art2_sec1 > h1{
+  padding-top: 100px;
+}
+
+main article#article2 section#art2_sec1 > p{
+  padding-bottom: 200px;
+}
+
+main article#article2 section#art2_sec2{
+  width:1400px;
+  margin-left: 250px;
+  background-image: url("../img/USE/06-article2_bcg.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  top: -150px;
+}
+
+main article#article2 section#art2_sec2 div.container{
+  display: flex;
+  padding-top: 150px;
+  padding-bottom: 120px;
+  justify-content: space-between;
+  background-color: transparent;
+}
+
+main article#article2 section#art2_sec2 div.container div#item1{
+  width: 700px;
+  background-color: rgba(255, 255, 255, .7);
+  padding: 50px 30px;
+}
+
+
+main article#article2 section#art2_sec2 div.container div#item1 a{
+  display: inline-block;
+  width: 160px;
+  height: 60px;
+  border: 3px solid #ff4400;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ff4400;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  margin-top: 50px;
+  margin-left: 230px;
+}
+
+main article#article2 section#art2_sec2 div.container div#item2{
+  padding-top: 200px;
+  position: relative;
+  left: 50px;
+}
+
+main article#article2 section#art2_sec2 div.container div#item2 button{
+  display: block;
+  width: 350px;
+  font-size: 28px;
+  text-align: center;
+  margin-top: 20px;
+  padding: 15px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  outline: none;
+  background-color: rgba(255,255,255,.5);
+  border: none;
+}
+
+main article#article3{
+  display: flex;
+  justify-content: center;
+}
+
+main article#article3 section#left{
+  width: 620px;
+  height: 895px;
+  background-image: url("../img/USE/07-article3_img.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: right;
+}
+
+main article#article3 section#right{
+  width: 600px;
+  padding-top: 60px;
+  padding-left: 100px;
+}
+
+main article#article3 section#right h1{
+  margin-bottom: 30px;
+}
+
+main article#article3 section#right p.title{
+  color: #ff4400;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+main article#article3 section#right p.title:first-child{
+  margin-top: 50px;
+}
+
+main article#article4{
+  margin: 100px auto 0;
+  background-color: rgba(246, 246, 246);
+  display: flex;
+  justify-content: center;
+}
+
+main article#article4 section#right{
+  background-color: white;
+  margin-top: 40px;
+  padding: 30px;
+}
+
+main article#article4 section#right p{
+  width: 800px;
+  padding: 10px;
+  margin: auto;
+}
+
+main article#article4 section#left{
+  padding: auto 15px;
+  margin-right: 80px;
+}
+
+main article#article4 section#left a.intro{
+  display: block;
+  width: 350px;
+  font-size: 28px;
+  text-align: center;
+  margin-top: 20px;
+  padding: 15px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  outline: none;
+  background-color: rgba(255,255,255,.5);
+  text-decoration: none;
+}
+
+main article#article4 section#left a:first-child{
+  margin-top: 150px;
+}
+
+main article#article4 section#left a:last-child{
+display: inline-block;
+width: 160px;
+height: 60px;
+border: 3px solid #ff4400;
+font-size: 16px;
+font-weight: 700;
+color: #ff4400;
+text-decoration: none;
+text-align: center;
+line-height: 50px;
+margin-top: 50px;
+margin-left: 100px;
+}
+
+footer section{
+  margin: 80px auto 80px;
+}

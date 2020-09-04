@@ -1,0 +1,258 @@
+@import url(../css/nav.css);
+@import url(../css/footer.css);
+
+/*{
+  border: none !important;
+} */
+
+header{
+  background-image: url(../img/USE/09-about_header_bcg.jpg);
+  min-width: 1920px;
+  width: 100%;
+  height: 350px;
+  text-align: center;
+  padding-top: 290px;
+}
+
+
+header div{
+  border: 1px solid green;
+}
+
+header div a{
+  border: 2px solid white;
+  /* border-radius: 50px; */
+  font-size: 16px;
+  color: white;
+  padding: 10px 20px;
+  margin: 20px;
+  letter-spacing: 2px;
+  transition: font-size .3s;
+  position: relative;
+  right: 0;
+  top: 0;
+}
+
+header div a:hover{
+  font-size: 20px;
+  font-weight: 700;
+  border: 2px solid #ff4400;
+  color: #ff4400;
+  background-color: rgba(0, 0, 0, .8);
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .5);
+}
+
+main div.container{
+  border: 1px solid blue;
+  display: flex;
+  justify-content: flex-end;
+}
+
+main div.container div#left, main div.container div#right{
+  border: 3px solid purple;
+}
+
+main div.container section{
+  border: 3px solid yellow;
+}
+
+main h1#news_topic{
+  border: 1px solid red;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-weight: 400;
+  color: black;
+  vertical-align: middle;
+  margin: 50px auto 30px;
+} 
+
+main h1#news_topic::before{
+  content: "";
+  display: inline-block;
+  width: 300px;
+  height: 3px;
+  background-color: black;
+  vertical-align: middle;
+  margin-right: 50px;
+}
+
+main div.container div#left section p.intro{
+  border: 1px solid red;
+  width: 1000px;
+}
+
+main div.container div#left section#sec2 input{
+  border: 1px solid red;
+  font-size: 16px;
+  letter-spacing: 2px;
+  width: 1050px;
+  height: 50px;
+  margin: 40px auto;
+}
+
+main div.container div#left section ul.tab{
+  width: 1050px;
+  border: 3px solid blue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main div.container div#left section ul.tab li.tab_topic{
+  border: 1px solid yellow;
+}
+
+main div.container div#left section ul.tab li#tri_left{
+  outline: 1px solid red;
+  border: 12px solid #ff4400;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+}
+
+main div.container div#left section ul.tab li#tri_right{
+  outline: 1px solid red;
+  border: 12px solid #ff4400;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+
+main div.container div#left section ul.tab li.tab_topic a{
+  border: 1px solid green;
+  font-size: 23px;
+  color: rgb(190, 190, 190);
+}
+
+main div.container div#left section ul.tab li.tab_topic:first-child > a{
+  color: #ff4400;
+}
+
+main div.container div#left section div#timeline{
+  border: 1px solid red;
+  padding-left: 25px;
+}
+
+main div.container div#left section div#timeline span{
+  border: 1px solid red;
+  display: inline-block;
+  width: 1000px;
+  height: 3px;
+  background-color: #ff4400;
+  margin: 30px 0 10px;
+  position: relative;
+}
+
+main div.container div#left section div#timeline  span::before{
+  content: "";
+  border: 16px solid #ff4400;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  position: absolute;
+  bottom: 0;
+  left: 140px;
+}
+
+main div.container div#left section div.tab_content{
+  border: 1px solid red;
+}
+
+main div.container div#left section div.tab_content ul.page_content{
+  border: 3px solid blue;
+}
+
+main div.container div#left section div.tab_content ul.page_content li{
+  border: 1px solid orange;
+}
+
+main div.container div#left section div.tab_content ul.page_content li div{
+  border: 1px solid black;
+  padding-left: 120px;
+}
+
+main div.container div#left section div.tab_content ul li div a, main div.container div#left section div.tab_content ul li  div span, main div.container div#left section div.tab_content ul li div time, main div.container div#left section div.tab_content ul li a{
+  border: 1px solid green;
+  font-size: 16px;
+  color:black;
+}
+
+main div.container div#left section div.tab_content ul li div.info{
+  margin-top: 40px;
+  padding-bottom: 5px;
+}
+
+main div.container div#left section div.tab_content ul li div.info time{
+  margin-right: 30px;
+}
+
+main div.container div#left section div.tab_content ul li div.title a{
+  display: inline-block;
+  border-bottom: 1px solid rgb(129, 129, 129) !important;
+  padding-bottom: 40px;
+  width: 850px;
+  color: #ff4400;
+  font-size: 23px;
+  line-height: 30px;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+main div.container div#left section div.tab_content ul.page{
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 50px auto;
+}
+
+main div.container div#left section div.tab_content ul.page li{
+  border: 1px solid blue;
+  margin: auto 5px;
+}
+
+main div.container div#left section div.tab_content ul.page li a{
+  background-color: #ff4400;
+  color: white;
+  display: inline-block;
+  padding: 15px 30px;
+}
+
+main div.container div#left section div.tab_content ul.page li:first-child a{
+  background-color: rgb(100, 100, 100);
+  color: white;
+}
+
+
+main div.container div#left section div.tab_content ul.page li:last-child a{
+  background-color: rgb(100, 100, 100);
+  color: white;
+}
+
+
+main div.container div#left section div.dis_none{
+  display: none;
+}
+
+main div#right{
+  margin-left: 120px;
+}
+
+main div#right div.img{
+  width: 300px;
+  height: 500px;
+  background-color: grey;
+}
+
+main div#other{
+  align-self: center;
+}
+
+main div#other div.img{
+  width: 400px;
+  height: 1000px;
+  background-color: grey;
+}
+
+footer section{
+  margin: 70px auto 50px;
+}
