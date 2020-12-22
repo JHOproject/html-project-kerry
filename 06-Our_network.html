@@ -6,68 +6,96 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KERRY - OUR NETWORK</title>
   <link rel="stylesheet" href="./css/06-our_network.css">
+  <script src="//d3js.org/d3.v3.min.js"></script>
+  <script src="//d3js.org/topojson.v1.min.js"></script>
+
 </head>
 
 <body>
   <nav>
+    <div class="new_nav">
+      <div class="logo"><a href="./index.html"></a></div>
+      <div class="hamburger">
+        <span class="ham_span span1"></span>
+        <span class="ham_span span2"></span>
+        <span class="ham_span span3"></span>
+      </div>
+    </div>
     <ul class="top_nav">
-      <li class="logo"><a></a></li>
-      <li class="multiple">OUR EXPERTISE
+      <li class="logo"><a href="./index.html"></a></li>
+      <li class="multiple">
+        <a href="./02-Our_Expertise.html">OUR EXPERTISE</a>
+        <span></span>
         <ul class="multiple">
-          <li class="multiple_title first"><a href="#">All Distribution</a></li>
-          <li class="multiple_item"><a href="#">Ambient Temperature</a></li>
-          <li class="multiple_item"><a href="#">Low-temperature</a></li>
-          <li class="multiple_item"><a href="#">Pharmaceutical</a></li>
-          <li class="multiple_title"><a href="#">Warehousing Services</a></li>
-          <li class="multiple_item"><a href="#">Ambient Temperature</a></li>
-          <li class="multiple_item"><a href="#">Low-temperature</a></li>
-          <li class="multiple_item"><a href="#">Pharmaceutical</a></li>
-          <li class="multiple_title"><a href="#">Road Freight</a></li>
-          <li class="multiple_item"><a href="#">Air Freight</a></li>
-          <li class="multiple_item"><a href="#">Ocean Freight</a></li>
-          <li class="multiple_item"><a href="#">Customs Brokerage</a></li>
-          <li class="multiple_item"><a href="#">Insurance Brokerage</a></li>
-          <li class="multiple_title"><a href="#">International Freight Forwarding</a></li>
-          <li class="multiple_title"><a href="#">Express</a></li>
-          <li class="multiple_title"><a href="#">Refrigeration Equipment</a></li>
-          <li class="multiple_title"><a href="#">KERRYGO</a></li>
+          <li class="multiple_title first"><a href="./02-Our_Expertise.html">All
+              Distribution</a></li>
+          <li class="multiple_item"><a href="./03-Intergrated_Logistics.html">Ambient
+              Temperature</a></li>
+          <li class="multiple_item"><a href="./03-Intergrated_Logistics.html">Low-temperature</a></li>
+          <li class="multiple_item"><a href="./03-Intergrated_Logistics.html">Pharmaceutical</a></li>
+          <li class="multiple_title"><a href="./02-Our_Expertise.html">Warehousing
+              Services</a></li>
+          <li class="multiple_item"><a href="./03-Intergrated_Logistics.html">Ambient
+              Temperature</a></li>
+          <li class="multiple_item"><a href="./03-Intergrated_Logistics.html">Low-temperature</a></li>
+          <li class="multiple_item"><a href="./03-Intergrated_Logistics.html">Pharmaceutical</a></li>
+          <li class="multiple_title"><a href="./02-Our_Expertise.html">Road Freight</a></li>
+          <li class="multiple_title"><a href="./02-Our_Expertise.html">International Forwarding</a>
+          </li>
+          <li class="multiple_item"><a href="./02-Our_Expertise.html">Air Freight</a></li>
+          <li class="multiple_item"><a href="./02-Our_Expertise.html">Ocean Freight</a></li>
+          <li class="multiple_item"><a href="./02-Our_Expertise.html">Customs Brokerage</a>
+          </li>
+          <li class="multiple_item"><a href="./02-Our_Expertise.html">Insurance Brokerage</a>
+          </li>
+          <li class="multiple_title"><a href="./02-Our_Expertise.html">Express</a></li>
+          <li class="multiple_title"><a href="./02-Our_Expertise.html">Refrigeration
+              Equipment</a></li>
+          <li class="multiple_title"><a href="http://www.kerrygo.com.tw/kerrygo/" target="_blank">KERRYGO</a>
+          </li>
         </ul>
       </li>
-      <li><a>OUR NETWORK</a></li>
-      <li><a>OUR NEWS</a></li>
-      <li class="multiple">ABOUT US
+      <li><a href="./06-Our_network.html">OUR NETWORK</a></li>
+      <li class="multiple">
+        <a href="./04-About_Us.html">ABOUT US</a>
+        <span></span>
         <ul class="multiple nav_link2">
-          <li class="multiple_title first"><a href="#">Who we are</a></li>
-          <li class="multiple_item"><a href="#">Mission & Vision</a></li>
-          <li class="multiple_item"><a href="#">Recognition & Awards</a></li>
-          <li class="multiple_item"><a href="#">Quality Certification</a></li>
-          <li class="multiple_title"><a href="#">AFFILIATES</a></li>
-          <li class="multiple_item"><a href="#">Taiwan</a></li>
-          <li class="multiple_item"><a href="#">China</a></li>
+          <li class="multiple_title first"><a href="./04-About_Us.html">Who we are</a></li>
+          <li class="multiple_item"><a href="./04-About_Us.html">Mission & Vision</a></li>
+          <li class="multiple_item"><a href="./04-About_Us.html">Recognition & Awards</a></li>
+          <li class="multiple_item"><a href="./04-About_Us.html">Quality Certification</a>
+          </li>
+          <li class="multiple_title"><a href="./04-About_Us.html">AFFILIATES</a></li>
+          <li class="multiple_item"><a href="./04-About_Us.html">Taiwan</a></li>
+          <li class="multiple_item"><a href="./04-About_Us.html">China</a></li>
           <li class="multiple_title"><a href="#">INVESTORS</a></li>
           <li class="multiple_item"><a href="#">Financial Info.</a></li>
           <li class="multiple_item"><a href="#">Annual Reports</a></li>
           <li class="multiple_item"><a href="#">Corporate Governance</a></li>
           <li class="multiple_item"><a href="#">Shareholder Info.</a></li>
           <li class="multiple_title"><a href="#">CSR</a></li>
-          <li class="multiple_title"><a href="#">Stakeholder Engagement</a></li>
+          <li class="multiple_title"><a href="#">Stakeholder Engagement</a>
+          </li>
         </ul>
       </li>
-      <li><a>CONTACT US</a></li>
-      <li class="nav_icon"><a></a></li>
-      <li class="nav_icon"><a></a></li>
-      <li class="nav_icon"><a></a></li>
+      <li><a href="./05-News_Event.html">OUR NEWS</a></li>
+      <li><a class="contact_us">CONTACT US</a></li>
+      <li class="nav_icon" id="nav_icon1"><a></a></li>
+      <li class="nav_icon" id="nav_icon2"><a href="./07-Track_trace.html"></a></li>
+      <li class="nav_icon" id="nav_icon3"><a></a></li>
     </ul>
   </nav>
 
   <main>
     <section>
-      <div id="earth">
-        <img src="" alt="">
+      <div class="earth_div">
+        <div id="earth">
+        </div>
       </div>
       <div>
-        <form action="">
-          <select name="region">
+        <span>Select Your Region :</span>
+        <form action="#" name="myForm">
+          <select name="region" class="region">
             <option value="0" selected disabled>Region</option>
             <option value="1">Greater China</option>
             <option value="2">Southeast Asia</option>
@@ -81,44 +109,108 @@
             <option value="10">Middle East</option>
             <option value="11">Africa</option>
           </select>
-          <select name="country"></select>
+          <select name="country" class="country">
+            <option value="0" selected disabled>Country</option>
+          </select>
+          <input type="button" value="search" class="search" onclick="TheWikiIntro()">
         </form>
-        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=19gI_yB6c4z4cpSgEecLb1aYte3TZpX7J" width="640"
-          height="480" id="google_map"></iframe>
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=19gI_yB6c4z4cpSgEecLb1aYte3TZpX7J" width="80%"
+        height="100%" id="google_map"></iframe>
+        <div class="map">
+
+        </div>
       </div>
     </section>
   </main>
-
   <footer>
-    <section id="sec1">
-      <h4 class="footer">NEWS ALERT</h4>
-      <p class="intro footer">Get our latest news & market updates
-        delivered directly to your inbox.</p>
-      <button type="button">
-        <pre>YOUR EMAIL    →</pre></button>
-      <div>
-        <a>Terms & Conditions</a>
-        <a>FAQ</a>
-      </div>
-    </section>
-    <section id="split"></section>
-    <section id="sec2">
-      <h4 class="footer">Corporate Headquarters</h4>
-      <div>
-        <p class="intro footer">Services：412-8999 ( Cell Phone +02)</p>
-        <p class="intro footer">Address：14F, 50 Xinsheng South Road</p>
-        <p class="intro footer">Section 1, Zhongzheng District, Taipei</p>
-        <p class="intro footer">Tel： +886 2 3322-6888</p>
-        <p class="intro footer">Fax： +886 2 3322-6777</p>
-        <p class="intro footer">eMail： callcenter@kerrytj.com</p>
-      </div>
-    </section>
+    <article>
+      <section id="sec1">
+        <h4 class="footer">News Alert</h4>
+        <p class="intro footer">Get our latest news & market updates
+          delivered directly to your inbox.</p>
+        <button type="button">
+          <pre>YOUR EMAIL    →</pre></button>
+        <div>
+          <a>Terms & Conditions</a>
+          <a>FAQ</a>
+        </div>
+      </section>
+      <section id="split"></section>
+      <section id="sec2">
+        <h4 class="footer">Corporate Headquarters</h4>
+        <div>
+          <p class="intro footer">Services：412-8999 ( Cell Phone +02)</p>
+          <p class="intro footer">Address：14F, 50 Xinsheng South Road</p>
+          <p class="intro footer">Section 1, Zhongzheng District, Taipei</p>
+          <p class="intro footer">Tel： +886 2 3322-6888</p>
+          <p class="intro footer">Fax： +886 2 3322-6777</p>
+          <p class="intro footer">eMail： callcenter@kerrytj.com</p>
+        </div>
+      </section>
+    </article>
     <section id="sec3">
       <button type="button" class="top">↑</button>
       <button type="button" class="button">GET A DEMO</button>
       <button type="button" class="button">SEARCH JOB</button>
     </section>
   </footer>
+  <div class="overlay">
+    <article>
+      <div>
+        <h1 class="topic">GET IN TOUCH</h1>
+        <p class="intro">CONTACT KERRY LOGISTICS</p>
+        <form action="#">
+          <div class="input_group">
+            <label for="kind">Class</label>
+            <select name="kind" id="kind">
+              <option disabled selected>Choose Class</option>
+              <option class="option" value="suggestion">SUGGESTION</option>
+              <option class="option" value="praise">PRAISE</option>
+              <option class="option" value="complain">COMPLAIN</option>
+            </select>
+          </div>
+          <div class="input_group">
+            <label for="fst_name">First Name</label>
+            <input class="input" type="text" id="fst_name" required></input>
+            <label for="lst_name">Last Name</label>
+            <input class="input" type="text" id="lst_name" required></input>
+            <label for="city">City</label>
+            <input class="input" type="text" id="city" required></input>
+            <label for="country">Country</label>
+            <input class="input" type="text" id="country" required></input>
+            <label for="company">Company</label>
+            <input class="input" type="text" id="company" required></input>
+            <label for="item_num">Item Number</label>
+            <input class="input" type="text" id="item_num" required></input>
+          </div>
+          <div class="input_group">
+            <label for="email">Email</label>
+            <input class="input" type="email" id="email" required></input>
+          </div>
+          <div class="input_group">
+            <label for="file">File</label>
+            <input class="input" type="file" id="file" required></input>
+          </div>
+          <div class="input_group">
+            <label for="message">Message</label>
+            <textarea class="input" id="message" required></textarea>
+          </div>
+          <div>
+            <label for="submit">SEND</label>
+            <input type="submit" id="submit"></input>
+          </div>
+        </form>
+      </div>
+      <div>
+        <button type="button" class="btn_modal_close">&#10006</button>
+      </div>
+    </article>
+  </div>
+  <script src="./venders/jquery/jquery-3.4.1.min.js"></script>
+  <script src="./js/nav.js"></script>
+  <script src="./js/footer.js"></script>
+  <script src="./js/06-our_network.js"></script>
+
 </body>
 
 </html>

@@ -1,35 +1,46 @@
+
 footer{
+  width: 100%;
+  /* min-width: 1200px; */
   background-color: black;
+  padding-top: 100px;
+  padding-bottom: 100px;
   position: relative;
-  min-width: 1920px;
+  display: flex;
+  justify-content: center;
 }
 
-footer section{
-  display: inline-block;
-  margin: 130px auto 150px;
+footer article{
+  display: flex;
+  justify-content: center;
+}
+
+footer article section{
+  /* display: inline-block; */
+  /* margin: 130px auto 150px; */
   vertical-align: top;
 }
 
-footer section h4.footer{
+footer article section h4.footer{
   color: rgb(194, 194, 194);
   font-weight: 700;
 }
 
-footer section p.footer{
+footer article section p.footer{
   color: rgb(194, 194, 194);
 }
 
-footer section#sec1{
+footer article section#sec1{
   width: 350px;
-  margin-left: 350px;
+  /* margin-left: 350px; */
 }
 
-footer section#sec1 p.footer{
+footer article section#sec1 p.footer{
   width: 300px;
   margin: 15px 0;
 }
 
-footer section#sec1 button pre{
+footer article section#sec1 button pre{
   font-size: 16px;
   color: #ff4400;
   text-align: left;
@@ -37,40 +48,42 @@ footer section#sec1 button pre{
   width: 320px;
 }
 
-footer section#sec1 button{
+footer article section#sec1 button{
   border: 1px solid #ff4400;
   border-radius: 30px;
   background-color: transparent;
 }
 
-footer section#sec1 div{
+footer article section#sec1 div{
   margin-top: 15px;
 }
 
-footer section#sec1 div a{
+footer article section#sec1 div a{
+  margin-right: 20px;
   font-size: 16px;
   font-weight: 700;
   color: rgb(194, 194, 194);
 }
 
-footer section#split{
+footer article section#split{
   background-color: rgb(194, 194, 194);
   border: none;
   width: 1px;
   height: 200px;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
-footer section#sec2{
+footer article section#sec2{
   width: 400px;
 }
 
-footer section#sec2 h4{
+footer article section#sec2 h4{
   margin-bottom: 15px;
 }
 
-footer section#sec2 p{
+footer article section#sec2 p{
   width: 400px;
   margin-top: 5px;
 }
@@ -82,15 +95,22 @@ footer section#sec3 button.button{
   letter-spacing: 2px;
   color: #ff4400;
   padding: 15px 60px;
-  margin: 50px auto;
+  margin-bottom: 50px;
   border: 1px solid #ff4400;
   border-radius: 30px;
   background-color: transparent;
+  transition: color .3s, border .3s;
+}
+
+footer section#sec3 button.button:hover{
+  color: white;
+  border: 1px solid white;
+  border-radius: 50px;
 }
 
 footer section#sec3 button.top{
   font-size: 36px;
-  color: white;
+  color: rgb(255, 255, 255);
   text-align: center;
   width: 60px;
   height: 60px;
@@ -99,6 +119,224 @@ footer section#sec3 button.top{
   border-radius: 50%;
   display: inline-block;
   position: absolute;
-  top: -30px;
-  right: 300px;
+  top: -25px;
+  right: 150px;
+  transition: border .3s;
+  outline: none;
 }
+
+footer section#sec3 button.top:hover{
+  border: 3px solid white;
+}
+
+footer section#sec3 button.top::after{
+  content: "back to top";
+  width: 140px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color:  rgba(255, 255, 255, 0%);
+  position: absolute;
+  top:50px;
+  left: -40px;
+  border-bottom: 3px solid rgba(255, 255, 255, 0%);
+  transition: color .3s, border-bottom .3s;
+}
+
+footer section#sec3 button.top:hover::after{
+  color:  rgba(255, 255, 255, 100%);
+  border-bottom: 3px solid rgba(255, 255, 255, .8);
+}
+
+/* -------------RWD */
+
+/* 320 - 575 */
+@media screen and (max-width: 575px){
+    footer{
+      display: block;
+      min-width: 320px;
+    }
+
+    footer article{
+      display: block;
+      width: 100%;
+    }
+
+    footer article section#sec1 {
+      width: 280px;
+      margin: auto;
+      text-align: center;
+    }
+
+    footer article section#sec1 button pre{
+      width: 280px;
+    }
+
+    footer article section#sec2{
+      width: 300px;
+      margin: auto;
+    }
+
+    footer article section#sec1 p.footer{
+      width: 280px;
+    }
+
+    footer article section#split{
+      margin: 30px auto;
+      width: 280px;
+      height: 1px;
+    }
+
+    footer article div section#sec2 {
+      text-align: center;
+      width: 100%;
+    }
+
+    footer article section#sec2 h4{
+      width: 100%;
+      display: inline-block;
+    }
+
+    footer article section#sec2 p{
+      width: 100%;
+      margin: auto;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    footer section#sec3{
+      display: block;
+    }
+  
+    footer section#sec3 button.button{
+      display: block;
+      margin: auto;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    footer section#sec3 button.top{
+      border: 3px solid white;
+      right: calc((100% - 60px) / 2) !important;
+    }
+
+    footer section#sec3 button.top::after{
+      color:  rgba(255, 255, 255, 100%);
+      border-bottom: 3px solid rgba(255, 255, 255, .8);
+    }
+
+}
+
+/* 576 - 767 */
+@media screen and (min-width: 576px) and (max-width: 767px){
+    footer{
+      display: block;
+    }
+
+    footer article{
+      display: block;
+      width: 100%;
+    }
+
+    footer article section#sec1 {
+      width: 300px;
+      margin: auto;
+    }
+
+    footer article section#sec1 button pre{
+      width: 280px;
+    }
+
+    footer article section#sec2{
+      width: 350px;
+      margin: auto;
+    }
+
+    footer article section#split{
+      margin: 30px auto;
+      width: 500px;
+      height: 1px;
+    }
+
+    footer article section#sec2 h4, footer article section#sec2 p {
+      width: 100%;
+      display: inline-block;
+    }
+
+    footer section#sec3{
+      display: block;
+    }
+  
+    footer section#sec3 button.button{
+      display: block;
+      margin: auto;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+}
+
+/* 768 - 991 */
+@media screen and (min-width: 768px) and (max-width: 991px){
+    footer{
+      display: block;
+    }
+
+    footer article{
+      width: 755px;
+      margin: auto;
+    }
+    footer article section#sec1 {
+      width: 300px;
+    }
+
+    footer article section#sec1 button pre{
+      width: 280px;
+    }
+
+    footer article section#sec2{
+      width: 350px;
+    }
+
+    footer article section#split{
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    footer article section#sec2 h4, footer article section#sec2 p {
+      width: 100%;
+      display: inline-block;
+    }
+
+    footer section#sec3{
+      display: flex;
+      justify-content: center;
+    }
+  
+    footer section#sec3 button.button{
+      margin-top: 20px;
+      margin-bottom: 0;
+      margin-right: 50px;
+    }
+}
+
+/* 992 - 1199 */
+@media screen and (min-width: 992px) and (max-width: 1199px){
+  footer{
+    display: block;
+    padding: 6%;
+  }
+
+  footer section#sec3{
+    display: flex;
+    justify-content: center;
+
+  }
+
+  footer section#sec3 button.button{
+    margin-top: 20px;
+    margin-bottom: 0;
+    margin-right: 50px;
+  }
+}
+

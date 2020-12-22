@@ -1,86 +1,169 @@
 @import url(./nav.css);
 @import url(./footer.css);
 
+*{
+  /* outline: 1px solid red; */
+  /* border: 1px solid blue; */
+}
+
+
+nav ul.top_nav > li:nth-child(2) > a{
+  border-top: 4px solid #ff4400;
+}
+
 p{
     font-size: 16px;
-    width: 1000px;
+    width: 60%;
     line-height: 30px;
     word-break: break-word;
     hyphens: auto;
+    letter-spacing: 1px;
 }
 
+
 aside{
-    display: inline-block;
+    background-color: rgb(246,246,246);
     width: 20%;
+    /* min-width: 240px; */
     height: 100%;
+    overflow-y: auto;
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1;
+    transition: all .5s;
+}
+
+aside.-move{
+  left: 0;
 }
 
 aside div{
-    background-color: rgb(246,246,246);
+    /* background-color: rgb(246,246,246); */
     padding-top: 130px;
     width: 100%;
     height: 100%;
 }
 
 aside div a{
+    /* background-color: rgb(246,246,246); */
     display: inline-block;
     width: 100%;
     font-size: 16px;
     color: rgb(166, 166, 166);
     display: block;
     line-height: 40px;
-    padding-left: 130px;
+    padding-left: 50px;
+}
+
+aside div a:hover{
+  color: #ff4400;
 }
 
 aside a.title{
     font-size: 18px;
     color: rgb(60, 60, 60);
     margin-top: 10px;
-    padding-left: 100px;
+    padding-left: 30px;
 }
 
 main{
+  width:100%;
+  /* min-width: 1200px; */
+}
+
+main span.aside_btn{
+  display: inline-block;
+  padding-left: 3px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+  color: white;
+  position: fixed;
+  top: 30%;
+  left: 0;
+  z-index: 1;
+  background-color: black;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  transition: all .5s;
+}
+
+main span.aside_btn.-move{
+  background-color: #ff4400;
+  left: 280px;
+  border-top: none;
+  border-bottom: none;
+}
+
+main span.aside_btn:hover{
+  cursor: pointer;
+  background-color: #ff4400;
+}
+
+main span.aside_btn.-move:hover{
+  background-color:black;
+}
+
+main article{
     display: inline-block;
-    min-width: 100%;
+    width: 80%;
+    /* min-width: 960px; */
+    margin-left: calc(100% - 80%);
+    padding-top: 10px;
+    padding-left: 5%;
+}
+
+main article section{
     padding-top: 100px;
-    padding-left: 20%;
 }
 
-main section{
-    padding-top: 80px;
+main article section h3{
+    margin: 0 30px 30px 0;
 }
 
-main section h3{
-    margin: 0 30px 30px 100px;
-}
-
-main section div.container{
+main article section div.container{
     display: flex;
     justify-content: space-between;
 }
 
-main section div.container div#p{
-    width: 1000px;
-    margin: 0 100px 30px 100px;
+main article section div.container div#p{
+    width: 100%;
+    /* margin: 0 0px 30px 0px; */
 }
 
-main section div.container div#p p{
-    display: inline-block;
-    margin-bottom: 50px;
+main article section div.container div#p p{
+    width: 100%;
+    display: block;
+    margin-bottom: 30px;
+    padding-right: 10px;
 }
 
-main section div#img{
+main article section div#img{
     display: inline-block;
     width: 300px;
-    height: 400px;
-    margin-left: 00px;
-    background-color: black;
+    height: 450px;
+    /* margin-left: 50px; */
+    background-image: url(../img/USE/38-exp_img1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: -280px;
 }
 
-main section#main_sec1 a{
+main article section div.img_2{
+  display: inline-block;
+  width: 300px;
+  height: 450px;
+  /* margin-left: 50px; */
+  background-image: url(../img/USE/38-exp_img1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: -280px;
+  display: none;
+}
+
+main article section#main_sec1 a{
     font-size: 16px;
     display: inline-block;
     width: 160px;
@@ -91,24 +174,526 @@ main section#main_sec1 a{
     text-decoration: none;
     text-align: center;
     line-height: 50px;
-    margin-left: 100px;
+    margin-left: 270px;
+    transition: all .5s;
 }
 
-main section#main_sec2{
+main article section#main_sec1 a:hover{
+  background-color: #ff4400;
+  color: white;
+}
+
+main article section#main_sec2{
     margin: 0 auto 100px;
 }
 
-main section#main_sec2 a{
+main article section#main_sec2 div a{
     font-size: 23px;
-    width: 1200px;
+    width: 100%;
     display: block;
     font-weight: 700;
     color: #ff4400;
     line-height: 30px;
-    padding: 30px 100px;
+    padding: 30px 0;
+    padding-left: 5%;
     border-bottom: 1px solid  rgb(129, 129, 129);
+    transition: all .5s;
 }
 
-footer section{
-    margin: 50px auto 50px;
+main article section#main_sec2 div a:hover{
+  border-left: 10px solid #ff4400;
+  border-bottom-color: white;
+  /* transform: scale(1.01); */
+  box-shadow: 5px 10px 10px 0 rgba(0, 0, 0, .3);
+  transform: translateX(-15px);
+  /* background: linear-gradient(transparent 10% ,rgba(255, 68, 0,.2) 80%); */
+}
+
+main article section#main_sec2 div p span{
+  display: block;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+main article section#main_sec2 div p{
+  width: 100%;
+  margin-top: 30px;
+  padding-left: 5%;
+  /* display: none; */
+}
+
+main article section#main_sec2 div ul{
+  width: 100%;
+  margin-top: 30px;
+  padding-left: 5%;
+  /* display: none; */
+}
+
+main article section#main_sec2 div ul li{
+  padding-left: 5px;
+  list-style: disc !important;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 1px;
+}
+
+footer{
+  width:100%;
+  /* min-width:1200px; */
+}
+
+footer article{
+    width: 80%;
+    /* min-width: 960px; */
+    margin-left: calc(100% - 80%);
+    padding-top: 60px;
+    padding-bottom: 50px;
+    padding-left: 5%;
+    display: inline-block;
+}
+
+footer article section{
+    display: inline-block;
+    /* margin: 130px auto 150px; */
+    vertical-align: top;
   }
+
+footer article > div{
+    display: flex;
+    justify-content: center;
+}
+
+  footer article div section h4.footer{
+    color: rgb(194, 194, 194);
+    font-weight: 700;
+  }
+  
+  footer article div section p.footer{
+    color: rgb(194, 194, 194);
+  }
+  
+  footer article div section#sec1{
+    width: 350px;
+    /* margin-left: 350px; */
+  }
+  
+  footer article div section#sec1 p.footer{
+    width: 300px;
+    margin: 15px 0;
+  }
+  
+  footer article div section#sec1 button pre{
+    font-size: 16px;
+    color: #ff4400;
+    text-align: left;
+    padding: 15px 15px;
+    width: 320px;
+  }
+  
+  footer article div section#sec1 button{
+    border: 1px solid #ff4400;
+    border-radius: 30px;
+    background-color: transparent;
+  }
+  
+  footer article section#sec1 div{
+    margin-top: 15px;
+  }
+  
+  footer article div section#sec1 div a{
+    margin-right: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(194, 194, 194);
+  }
+  
+  footer article div section#split{
+    background-color: rgb(194, 194, 194);
+    border: none;
+    width: 1px;
+    height: 200px;
+    margin-top: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  
+  footer article div section#sec2{
+    width: 400px;
+  }
+  
+  footer article div section#sec2 h4{
+    margin-bottom: 15px;
+  }
+  
+  footer article div section#sec2 p{
+    width: 400px;
+    margin-top: 5px;
+  }
+
+footer article section#sec3{
+    width: 100%;
+    margin-bottom: 30px;
+    padding-left: 80px;
+}
+
+footer article section#sec3 button.button{
+    display: inline-block;
+    margin: 0;
+    margin-right: 110px;
+}
+
+/* footer article section#sec3 button.top::after{
+    top: 15px;
+    left: -130px;
+} */
+
+footer article div section#sec1 button pre{
+    width: 280px;
+}
+
+/* -----------------RWD */
+
+/* 320 - 575 */
+@media screen and (max-width: 575px){
+  aside{
+    width: 280px;
+    left: -280px;
+    /* min-width: 320px; */
+  }
+
+  aside div{
+  padding-top: 120px;
+  }
+  
+  main{
+    min-width: 320px;
+  }
+
+  main article{
+    width: 100%;
+    margin-left: 0;
+    margin: auto;
+    padding: 3% 8%;
+  }
+
+  main article section{
+    padding-top: 0;
+  }
+
+  main article section h3{
+    margin: 30px 30px 30px 0;
+  }
+
+  main article section#main_sec1{
+    position: relative;
+  }
+
+  main article section#main_sec1 a{
+    position: relative;
+    /* right: 13.5%; */
+    /* bottom: 0; */
+    margin: auto;
+  }
+
+  main article section div.container{
+    flex-direction: column;
+  }
+
+  main article section div.img_2{
+    display: inline-block;
+    width: 100%;
+    height: 200px;
+    background-position-x: 0;
+  }
+
+  main article section div#img{
+    display: none;
+  }
+
+  main article section#main_sec2 div a:hover{
+    transform: translateX(-10px);
+  }
+
+  footer article{
+    width: 100%;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  footer article > div{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer article div section#sec1{
+    text-align: center;
+    width: 100%;
+  }
+
+  footer article div section#sec1 p.footer{
+    margin: auto;
+    width: 90%;
+  }
+
+  footer article div section#split{
+    width: 280px;
+    height: 1px;
+    margin-bottom: 30px;
+  }
+
+  footer article div section#sec2 {
+    text-align: center;
+    width: 100%;
+  }
+
+  footer article div section#sec2 h4{
+    width: 100%;
+  }
+  
+  footer article div section#sec2 p{
+    width: 100%;
+    font-size: 14px;
+  }
+
+  footer article section#sec3{
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer article section#sec3 button.button{
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+
+/* 576 - 767 */
+@media screen and (min-width: 576px) and (max-width: 767px){
+  aside{
+    width: 280px;
+    left: -280px;
+  }
+
+  aside div{
+    padding-top: 80px;
+  }
+  
+  main article{
+    width: 100%;
+    margin-left: 0;
+    margin: auto;
+    padding: 3% 8%;
+  }
+
+  main article section{
+    padding-top: 0;
+  }
+
+  main article section#main_sec1{
+    position: relative;
+  }
+
+  main article section#main_sec1 a{
+    position: relative;
+    /* right: 13.5%; */
+    /* bottom: 0; */
+    margin: auto;
+  }
+
+  main article section div.container{
+    flex-direction: column;
+  }
+
+  main article section div.img_2{
+    display: inline-block;
+    width: 100%;
+    height: 300px;
+    background-position-x: 0;
+  }
+
+  main article section div#img{
+    display: none;
+  }
+
+  main article section#main_sec2 div a:hover{
+    transform: translateX(-10px);
+  }
+
+  footer article{
+    width: 100%;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  footer article > div{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer article div section#sec1{
+    text-align: center;
+  }
+
+  footer article div section#sec1 p.footer{
+    margin: auto;
+  }
+
+  footer article div section#split{
+    width: 200px;
+    height: 1px;
+    margin-bottom: 30px;
+  }
+
+  footer article div section#sec2 {
+    text-align: center;
+  }
+
+  footer article section#sec3{
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer article section#sec3 button.button{
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  
+}
+
+/* 768 - 991 */
+@media screen and (min-width: 768px) and (max-width: 991px){
+  aside{
+    width: 280px;
+    left: -280px;
+  }
+  
+  main article{
+    width: 100%;
+    margin-left: 0;
+    margin: auto;
+    padding: 5% 8% 10%;
+  }
+
+  main article section{
+    padding-top: 0px;
+  }
+
+  main article section div.img_2{
+    display: inline-block;
+    width: 100%;
+    height: 400px;
+    background-position-x: 0;
+  }
+
+  main article section div#img{
+    display: none;
+  }
+
+  main article section#main_sec1{
+    position: relative;
+  }
+
+  main article section#main_sec1 a{
+    position: relative;
+    bottom: 0;
+    margin-left: 0;
+  }
+
+  main article section div.container{
+    flex-direction: column;
+  }
+
+  footer article{
+    width: 100%;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  footer article > div{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer article div section#sec1{
+    text-align: center;
+  }
+
+  footer article div section#sec1 p.footer{
+    margin: auto;
+  }
+
+  footer article div section#split{
+    width: 200px;
+    height: 1px;
+    margin-bottom: 30px;
+  }
+
+  footer article div section#sec2 {
+    text-align: center;
+  }
+
+  footer article section#sec3{
+    padding-left: 0;
+    text-align: center;
+    display: flex;
+  }
+
+  footer article section#sec3 button.button{
+    margin-right: 30px;
+  }
+  
+
+}
+
+/* 992 - 1199 */
+@media screen and (min-width: 992px) and (max-width: 1199px){
+  aside{
+    width: 280px;
+    left: -280px;
+  }
+  
+  main article{
+    width: 100%;
+    margin-left: 0;
+    margin: auto;
+    padding: 10% 8%;
+  }
+
+  main article section{
+    padding-top: 30px;
+  }
+
+  main article section div#img{
+    width: 600px;
+    height: 600px;
+  }
+
+  main article section#main_sec1{
+    position: relative;
+  }
+
+  main article section#main_sec1 a{
+    position: absolute;
+    right: 11%;
+    bottom: 0;
+  }
+
+  footer article{
+    width: 100%;
+    margin-left: 0;
+    padding: 0;
+  }
+
+}
+
+/* 1200 - */
+@media screen and (min-width: 1200px){
+  main span.aside_btn{
+    display: none;
+  }
+}

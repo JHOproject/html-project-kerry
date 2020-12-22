@@ -1,15 +1,16 @@
 @import url(./@reset.css);
 
-html{
-    min-width: 1920px;
-  }
+
+*{
+  /* border: 1px solid blue; */
+}
 
 h1.topic{
     font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
-    font-size: 50px;
+    font-size: 42px;
     font-weight: 700;
     color: #ff4400;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
   }
   
   h2{
@@ -22,127 +23,200 @@ h1.topic{
     font-size: 28px;
     font-weight: 700;
     color: black;
+    letter-spacing: 1px;
   }
   
   h4{
     font-size: 23px;
     color: black;
     font-weight: 400;
+    letter-spacing: 1px;
   }
   
   h5{
     font-size: 21px;
     color: black;
     font-weight: 400;
+    letter-spacing: 1px;
   }
   
   p.intro{
     font-size: 16px;
-    width: 1200px;
+    width: 100%;
     line-height: 30px;
     word-break: break-word;
     hyphens: auto;
+    letter-spacing: 1px;
   }
 
 a:hover, button:hover{
-    cursor: pointer;
+    cursor: pointer !important;
+    outline: none;
 }
-
-li.multiple:hover{
-    cursor: pointer;    
-}
-
 
 nav{
     width: 100%;
+    background-color: rgba(255, 255, 255, .98);
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, .3);
+    /* min-width: 1200px; */
     position: sticky;
-    top: 0;
+    top: 0px;
     z-index: 3;
 }
 
 nav ul.top_nav{
-    background-color: rgba(255, 255, 255, .98);  
     width: 100%;
-    min-width: 1500px;
-    height: 106px;
+    margin: auto;
+    /* height: 106px; */
     text-align: center;
-    box-shadow: 0 -5px 20px 0 rgba(0, 0, 0, .16);
+    transition: .7s;
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, .3);
+}
+
+nav ul.top_nav.-on{
+  position: absolute;
+  top: 90px;
+  background-color: rgba(255, 255, 255, .98);
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .8);
+  opacity: 1;
+  z-index: 3;
+  visibility: visible;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 nav ul.top_nav > li{
-    height: 50px;
     display: inline-block;
     color: #ff4400;
-    margin: auto 20px;
+    padding: 0 0 15px;
+    margin: 15px 10px 0;
+    vertical-align: middle;
+}
+
+nav ul.top_nav > li:first-child{
+  margin-right: 0;
+}
+
+nav ul.top_nav > li a{
+  color: #ff4400;
 }
 
 nav ul.top_nav > li > a, nav ul.top_nav li.multiple,nav ul.top_nav li.multiple ul.multiple li a{
     font-size: 18px;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
+}
+
+nav ul.top_nav li.logo{
+  margin-right: 30px;
 }
 
 nav ul.top_nav li.logo a{
     display: inline-block;
-    width: 62px;
-    height: 58px;
-    position: relative;
-    top: 20px;
-    margin-left: 10px;
-    background-color:rgba(0, 0, 0, .5);
+    width: 80px;
+    height: 60px;
+    background-image: url(../img/USE/15-logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: 5px;
 }
 
 nav ul.top_nav li.nav_icon{
     margin: auto 0;
-    position: relative;
-    left: 150px;
-    top: 20px;
+    padding: 15px 0;
+}
+
+nav ul.top_nav > li:nth-child(7){
+  margin-left: 50px;
 }
 
 nav ul.top_nav li.nav_icon a{
     display: inline-block;
-    outline: 1px solid white;
+    border: 1px solid white;
     width: 62px;
     height: 58px;
-    background-color: rgba(0, 0, 0, .5);
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: .5;
+    transition: opacity .3s;
+}
+
+nav ul.top_nav li#nav_icon1 a{
+  background-image: url("../img/USE/22-icon_search.PNG");
+}
+
+nav ul.top_nav li#nav_icon2 a{
+  background-image: url("../img/USE/23-icon_trace.PNG");
+}
+
+nav ul.top_nav li#nav_icon3 a{
+  background-image: url("../img/USE/24-icon_member.PNG");
+}
+
+nav ul.top_nav li.nav_icon a:hover{
+  opacity: 1;
 }
 
 nav ul.top_nav li.multiple{
     position: relative;
 }
 
-
-nav ul.top_nav li.multiple ul.multiple{
+nav ul.top_nav li.multiple > span{
     display: inline-block;
-    width: 450px;
-    height: 725px;
-    text-align: left;
-    line-height: 35px;
-    border-top: 10px solid #ff4400;
-    border-bottom: 10px solid #ff4400;
-    background-color: #fff;
-    box-shadow: 5px 0 5px rgba(0, 0, 0, .16);
+    border: 10px solid #ff4400;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
     position: absolute;
-    top: 30px;
-    left: 0;
+    right: 35%;
+    top: 5px;
     display: none;
 }
 
-nav ul.top_nav li.multiple ul.nav_link2{
-    height: 600px;
+nav ul.top_nav li.multiple ul.multiple{
+    display: inline-block;
+    /* width: 450px; */
+    width: 400px;
+    text-align: left;
+    /* line-height: 35px; */
+    line-height: 30px;
+    border-top: 10px solid #ff4400;
+    border-bottom: 10px solid #ff4400;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .16);
+    position: absolute;
+    top:30px;
+    left: 0;
+    opacity: 0;
+    transition: opacity .5s;
+    z-index: -1;
+    visibility: hidden;
 }
 
+nav ul.top_nav li.multiple ul.multiple.-on{
+  display: inline-block;
+}
+
+/* nav ul.top_nav li.multiple ul.nav_link2{
+    height: 510px;
+} */
+
 nav ul.top_nav li.multiple ul.multiple li{
-    display: inline-block;
+    display: block;
     width: 100%;
-    height: 35px;
+    /* height: 35px; */
+    height: 30px;
+    background-color: rgba(255, 255, 255, 1);
+    transition: background-color .1s;
 }
 
 nav ul.top_nav li.multiple  ul.multiple li a{
     display: inline-block;
     width: 100%;
-    height: 35px;
+    /* height: 35px; */
+    height: 30px;
     text-decoration: none;
     color: rgb(60, 60, 60);
+    transition: color .1s;
 }
 
 nav ul.top_nav li.multiple ul.multiple li.multiple_title a{
@@ -155,8 +229,10 @@ nav ul.top_nav li.multiple ul.multiple li.multiple_item a{
 }
 
 nav ul.top_nav li.multiple:hover > ul{
-    display: inline-block;
     text-shadow: none;
+    opacity: 1;
+    z-index: 4;
+    visibility: visible;
 }
 
 nav ul.top_nav li:hover > a, nav ul.top_nav li.multiple:hover{
@@ -170,12 +246,102 @@ nav ul.top_nav li.multiple ul.multiple li:hover{
 }
 
 nav ul.top_nav li.multiple ul.multiple li a:hover{
-    color: white;
+    color: rgb(255, 255, 255);
     text-shadow: none;
 }
 
+nav ul.top_nav li.multiple_item.-off{
+  display: none !important;
+}
 
-nav div.overlay{
+nav > div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, .98);
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, .3);
+  position: relative;
+  z-index: 4;
+}
+
+nav div div.logo{
+  display: inline-block;
+  padding: 0 0 15px;
+  margin: 15px 15px 0;
+  margin-left: 5%;
+}
+
+nav div div.logo a{
+    display: inline-block;
+    width: 80px;
+    height: 60px;
+    background-image: url(../img/USE/15-logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: 5px;
+}
+
+nav div div.hamburger{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin-right: 5%;
+}
+
+nav div div.hamburger span{
+  display: block;
+  width: 40px;
+  height: 5px;
+  /* border-radius: 10px; */
+  background-color: #ff4400;
+  position: absolute;
+  transition: .3s ease-in-out;
+}
+
+.span1{
+  transform: translate(-50%)rotateZ(0deg);
+  top: 30%;
+  left: 50%;
+  transition: .3s ease-in-out;
+}
+
+.span2{
+  transform: translate(-50%);
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+  transition: .3s ease-in-out;
+}
+
+.span3{
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%)rotateZ(0deg);
+  transition: .3s ease-in-out;
+}
+
+.move1{
+  transform: translate(-50%)rotateZ(45deg);
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+.move2{
+  transform: translate(-50%)rotateZ(0deg);
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+}
+
+.move3{
+  transform: translate(-50%)rotateZ(-45deg);
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+div.overlay{
     position: fixed;
     top: 0;
     left: 0;
@@ -184,78 +350,113 @@ nav div.overlay{
     background-color: rgba(0, 0, 0, .5);
     opacity: 0;
     z-index: -2;
-    transition: opacity 1s;
   }
 
-nav  div.overlay.-on{
+div.overlay.-on{
     opacity: 1;
-    z-index: 1;
+    z-index: 3;
+    transition: opacity .5s;
   }
   
-nav  div.overlay.-opacity-zero{
+div.overlay.-opacity-zero{
     opacity: 0;
   }
   
-nav  div.overlay > article{
+div.overlay > article{
     background-color: white;
-    width: 100%;
-    max-width: 1000px;
+    width: 80%;
+    height: 80%;
+    /* max-width: 950px; */
     box-shadow: 0 0 20px 10px rgba(0, 0, 0, .16);
     padding: 10px;
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
-nav  div.overlay > article div h1, nav  div.overlay > article div > p{
+div.overlay > article > div:first-child{
+  width: 98%;
+  /* max-width: 900px; */
+}
+
+div.overlay > article > div:last-child{
+  width: 2%;
+}
+
+div.overlay > article div h1, div.overlay > article div > p{
     text-align: center;
     letter-spacing: 3px;
-    width: 100%;
   }
 
-nav  div.overlay > article div h1{
+div.overlay > article div > p{
+  width: 100%;
+  margin: 0 auto 30px;
+}
+
+div.overlay > article div h1{
   color: white;
   font-size: 28px;
   padding: 8px;
-  margin: 40px 0 5px;
+  margin: 0px 5px 0px;
   background-color: #ff4400;
 }
 
-nav  div.overlay > article div form{
+div.overlay > article div form{
+  width: 100%;
   padding: 0 20px;
-  border: 1px solid red;
-  margin: 30px auto;
+  margin: 0 auto;
 }
 
-nav  div.overlay > article div form div.input_group{
-  border: 1px solid red;
-  padding-left: 80px; 
+div.overlay > article div form div.input_group{
+  padding-left: 50px; 
 }
 
-nav  div.overlay > article div form select{
+div.overlay > article div form select{
     width: 50%;
     border: 1px solid rgb(190, 190, 190);
     font-size: 20px !important;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-nav  div.overlay > article div form div label{
-    border: 1px solid red;
+div.overlay > article div form > div:last-child{
+  width: 100%;
+  text-align: center;
+}
+
+div.overlay > article div form div label{
     display: inline-block;
-    /* border: 1px solid blue; */
     width: 120px;
     font-size: 20px;
   }
 
-nav  div.overlay > article div form div label[for="item_num"]{
+div.overlay > article div form div label[for="item_num"]{
     width:140px;
 }
 
+div.overlay > article div form div label[for="submit"]{
+  text-align: center;
+  color: rgb(255, 68, 0);
+  font-weight:400;
+  padding: 5px;
+  margin: 30px auto;
+  border: 2px solid #ff4400;
+  background-color: rgba(255, 68, 0, 0%);
+  transition: background-color .3s, color .3s, box-shadow .3s;
+}
 
-nav  div.overlay > article div form div input{
+div.overlay > article div form div label[for="submit"]:hover{
+  cursor: pointer;
+  background-color: rgba(255, 68, 0, 100%);
+  color: rgb(255, 255, 255);
+  box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, .5);
+}
+
+div.overlay > article div form div input{
   width: 252px;
   font-size: 20px;
   outline: none;
@@ -263,45 +464,436 @@ nav  div.overlay > article div form div input{
   margin-bottom: 20px;
 }
 
-nav  div.overlay > article div form div input#item_num{
+div.overlay > article div form div input#item_num{
   width: 233px;
 }
 
-nav  div.overlay > article div form div input#email{
+div.overlay > article div form div input#email{
   width: 350px;
 }
 
-nav  div.overlay > article div form div input.input{
+div.overlay > article div form div input.input{
     border-bottom: 1px solid grey;  
   }
 
-nav  div.overlay > article div form div input#fst_name, nav  div.overlay > article div form div input#city, input#email, nav  div.overlay > article div form div input#company{
+div.overlay > article div form div input#fst_name,div.overlay > article div form div input#city, div.overlay > article div form div input#company{
     margin-right: 60px; 
  }
 
- nav  div.overlay > article div form div textarea#message{
-   width: 90%;
+div.overlay > article div form div textarea#message{
+   width: 70%;
    height: 20vh;
    border: 1px solid grey;
    text-align: start;
    padding: 0;
    resize: vertical;
+   vertical-align: top;
  }
 
-nav  div.overlay > article div form div input#submit{
+div.overlay > article div form div input#submit{
     font-size: 0;
+}
 
+div.overlay > article div form > div:last-child input#submit{
+    width: 0;
 }
 
 
-nav div.overlay article button{
-    border: 1px solid green;
-    font-size: 16px;
-    background-color: none;
+div.overlay article button{
+    font-size: 20px;
+    background-color: white;
     outline: none;
-    /* border: none; */
+    border: none;
+    position: relative;
+    /* right: -10px;
+    top: 10px; */
+}
+
+div.overlay article button:hover::after{
+  content: "close";
+  font-size: 16px;
+  color: rgba(0, 0, 0, 100%);
+  position: absolute;
+  top: 5px;
+  right: 25px;
+}
+
+/* -----------------RWD */
+
+/* - 575 */
+@media screen and (max-width: 575px){
+  h1.topic{
+    font-size: 20px;
+  }
+
+  h2{
+    font-size: 18px;
+  }
+
+  p.intro{
+    font-size: 13.5px;
+    width: 100%;
+    line-height: 22px;
+    letter-spacing: 0;
+  }
+
+  nav{
+    min-width: 320px;
+  }
+
+  nav ul.top_nav{
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    z-index: -3;
+    visibility: hidden;
+  }
+
+  nav ul.top_nav.-on{
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, .3);
+    height: 52vh;
+  }
+
+  nav ul.top_nav > li{
+    display: block;
+  }
+
+  nav ul.top_nav li.logo{
+    display: none;
+  }
+
+  nav ul.top_nav li.nav_icon{
+    margin: auto 0;
+    padding: 0;
+    display: inline-block;
+  }
+
+  nav ul.top_nav li:hover{
+    cursor: pointer;
+  }
+
+  nav ul.top_nav li.multiple > span{
+    display: inline-block;
+    right: 5%;
+  }
+
+  nav ul.top_nav li.multiple > span:hover{
+    cursor: pointer;
+  }
+
+  nav ul.top_nav li.multiple:hover span{
+    cursor: pointer;
+    border-top-color: black;
+  }
+
+  nav ul.top_nav li.multiple ul.multiple{
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    display: inline-block;
+    position: static;
+    opacity: 1;
+    width: 100%;
+    text-align: center;
+    visibility: initial;
+    display: none;
+  }
+
+  nav ul.top_nav li.multiple ul.multiple li.multiple_title a{
+    padding-left: 0;
+  }
+
+  nav ul.top_nav li.multiple ul.multiple li.multiple_item a{
+    padding-left: 0;
+  }
+  
+  nav div.hamburger{
+    display: inline-block;
+  }
+
+  div.overlay > article div h1{
+    font-size: 20px;
+  }
+
+  div.overlay > article div > p, div.overlay > article div form div label, div.overlay > article div form select, div.overlay > article div form div input, div.overlay article button{
+    font-size: 13.5px !important;
+  }
+
+  div.overlay > article div > p{
+    letter-spacing: 0;
+  }
+
+  div.overlay > article div form div.input_group{
+    padding-left: 0;
+  }
+
+  div.overlay > article div form div input.input, div.overlay > article div form div input#item_num, div.overlay > article div form div textarea#message, div.overlay > article div form div input#email{
+    width: 100%;
+  }
+}
+
+/* 576 - 767 */
+@media screen and (min-width: 576px) and (max-width: 767px){
+  h1.topic{
+    font-size: 28px;
+  }
+
+  p.intro{
+    line-height: 22px;
+    letter-spacing: .5;
+  }
+
+  nav ul.top_nav{
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    z-index: -3;
+    visibility: hidden;
+  }
+
+  nav ul.top_nav.-on{
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, .3);
+    height: 52vh;
+  }
+
+  nav ul.top_nav > li{
+    display: block;
+  }
+
+  nav ul.top_nav li.logo{
+    display: none;
+  }
+
+  nav ul.top_nav li.nav_icon{
+    margin: auto 0;
+    padding: 0;
+    display: inline-block;
+  }
+
+  nav ul.top_nav li:hover{
+    cursor: pointer;
+  }
+
+  nav ul.top_nav li.multiple > span{
+    display: inline-block;
+    right: 25%;
+  }
+
+  nav ul.top_nav li.multiple > span:hover{
+    cursor: pointer;
+  }
+
+  nav ul.top_nav li.multiple:hover span{
+    cursor: pointer;
+    border-top-color: black;
+  }
+
+  nav ul.top_nav li.multiple ul.multiple{
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    display: inline-block;
+    position: static;
+    opacity: 1;
+    width: 100%;
+    text-align: center;
+    visibility: initial;
+    display: none;
+  }
+
+  nav ul.top_nav li.multiple ul.multiple li.multiple_title a{
+    padding-left: 0;
+  }
+
+  nav ul.top_nav li.multiple ul.multiple li.multiple_item a{
+    padding-left: 0;
+  }
+  
+  nav div.hamburger{
+    display: inline-block;
+  }
+
+  div.overlay > article div form div.input_group{
+    padding-left: 0;
+  }
+
+  div.overlay > article div form div input.input, div.overlay > article div form div input#item_num, div.overlay > article div form div textarea#message, div.overlay > article div form div input#email{
+    width: 100%;
+  }
+}
+
+/* 768 - 991 */
+@media screen and (min-width: 768px) and (max-width: 991px){
+  h1.topic{
+    font-size: 32px;
+  }
+
+  nav ul.top_nav{
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    z-index: -3;
+    visibility: hidden;
+  }
+
+  nav ul.top_nav.-on{
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, .3);
+    height: 52vh;
+  }
+
+  nav ul.top_nav > li{
+    display: block;
+  }
+
+  nav ul.top_nav li.logo{
+    display: none;
+  }
+
+  nav ul.top_nav li.nav_icon{
+    margin: auto 0;
+    padding: 0;
+    display: inline-block;
+  }
+
+  nav ul.top_nav li:hover{
+    cursor: pointer;
+  }
+
+  nav ul.top_nav li.multiple > span{
+    display: inline-block;
+  }
+
+  nav ul.top_nav li.multiple > span:hover{
+    cursor: pointer;
+  }
+
+  nav ul.top_nav li.multiple:hover span{
+    cursor: pointer;
+    border-top-color: black;
+  }
+
+  nav ul.top_nav li.multiple ul.multiple{
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    display: inline-block;
+    position: static;
+    opacity: 1;
+    width: 100%;
+    text-align: center;
+    visibility: initial;
+    display: none;
+  }
+
+  nav ul.top_nav li.multiple ul.multiple li.multiple_title a{
+    padding-left: 0;
+  }
+
+  nav ul.top_nav li.multiple ul.multiple li.multiple_item a{
+    padding-left: 0;
+  }
+
+  nav div.hamburger{
+    display: inline-block;
+  }
+
+  div.overlay > article{
+    width: 50%;
+  }
+
+  div.overlay > article div form div label{
+    display: block;
+  }
+
+  div.overlay > article div form > div:first-child label{
+    display: inline-block;
+  }
+
+  div.overlay > article div form div.input_group{
+    padding-left: 0;
+  }
+
+  div.overlay > article div form div input.input, div.overlay > article div form div input#item_num, div.overlay > article div form div textarea#message, div.overlay > article div form div input#email{
+    width: 100%;
+  }
 }
 
 
+/* 992 - 1199 */
+@media screen and (min-width: 992px) and (max-width: 1199px){
+  h1.topic{
+    font-size: 34px;
+  }
 
+  nav > div {
+    display: none;
+  }
+
+  nav ul.top_nav{
+    background-color: rgba(255, 255, 255, .98);
+    position: absolute;
+    top: 0;
+  }
+
+  nav ul.top_nav.-on{
+    top:0;
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, .3);
+  }
+
+  nav ul.top_nav > li{
+    margin: 15px 20px 0 0;
+  }
+
+  nav ul.top_nav > li > a, nav ul.top_nav li.multiple,nav ul.top_nav li.multiple ul.multiple li a{
+    letter-spacing: 2px;
+    font-size: 16px;
+  }
+
+  nav ul.top_nav li.logo{
+    margin-right: 10px;
+  }
+
+  nav ul.top_nav > li:nth-child(7){
+    margin-left: 10px;
+  }
+
+  div.overlay > article{
+    width: 50%;
+  }
+
+  div.overlay > article div form div label{
+    display: block;
+  }
+
+  div.overlay > article div form > div:first-child label{
+    display: inline-block;
+  }
+
+  div.overlay > article div form div.input_group{
+    padding-left: 0;
+  }
+
+  div.overlay > article div form div input.input, div.overlay > article div form div input#item_num, div.overlay > article div form div textarea#message, div.overlay > article div form div input#email{
+    width: 100%;
+  }
+}
+
+
+/* 1200 - */
+@media screen and (min-width: 1200px){
+  nav > div {
+    display: none;
+  }
+
+  nav ul.top_nav{
+    background-color: rgba(255, 255, 255, .98);
+    position: absolute;
+    top: 0;
+  }
+
+  nav ul.top_nav.-on{
+    top:0;
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, .3);
+  }
+}
 

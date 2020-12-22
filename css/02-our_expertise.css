@@ -1,18 +1,21 @@
 @import url(./nav.css);
 @import url(./footer.css);
 
-
-nav ul.top_nav{
-  position: fixed;
-  z-index: 2;
+*{
+  /* outline: 1px solid red; */
+  /* border: 1px solid blue; */
 }
 
-
+nav ul.top_nav > li:nth-child(2) > a{
+  border-top: 4px solid #ff4400;
+}
+ 
 p{
   font-size: 16px;
   line-height: 30px;
   word-break: break-word;
   hyphens: auto;
+  letter-spacing: 1px;
 }
 
 h1.topic{
@@ -20,8 +23,13 @@ h1.topic{
   font-weight: 400;
 }
 
+main{
+  width: 100%;
+  /* min-width: 1200px; */
+}
+
 main article#article1{
-  padding-top: 150px;
+  padding-top: 80px;
   width: 100%;
   height: 100%;
   background-image: url("../img/USE/05-article1_bcg.png");
@@ -48,45 +56,122 @@ main article#article1 > div.container{
 }
 
 main article#article1 div.container section#left{
-  width: 510px;
+  width: 35%;
   height: 315px;
-  background-color: grey;
   margin-top: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+main article#article1 div.container section#left iframe{
+  box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, .7);
 }
 
 
 main article#article1 div.container section#right{
+  width: 65%;
   background-color: #fff;
-  padding: 80px 90px 80px;
+  padding: 40px 90px 80px;
 }
 
 main article#article1 div.container section#right > h1.topic{
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 main article#article1 div.container section#right > p{
-  width: 900px;
-  margin-top: 30px;
+  width: 100%;
+  margin-top: 10px;
 }
 
-main article#article1 div.container section#right div.container p{
-  width: 315px;
+main article#article1 div.container section#right div.container div p{
+  width: 220px;
+  margin: auto;
   text-align: center;
   margin-top: 10px;
   color: rgb(122, 122, 122);
+  transition: all .3s;
+}
+
+main article#article1 div.container section#right div.container div:hover > p{
+  color: #ff4400;
+}
+
+main article#article1 div.container section#right div.container div > p:hover{
+  cursor: pointer;
 }
 
 main article#article1 div.container section#right div.container{
   display: flex;
   margin: 50px auto 20px;
+  position: relative;
 }
 
-main article#article1 div.container section#right div.container a{
+main article#article1 div.container section#right div.container:before{
+  content: "Click the photo below to get more information.";
+  font-size: 16px;
+  color: #ff4400;
+  position: absolute;
+  top: -30px;
+  left: 0;
+}
+
+main article#article1 div.container section#right div.container div a{
   display: inline-block;
-  width: 315px;
-  height:215px;
-  background-color: grey;
+  width: 100%;
+  height: 140px;
   border: 1px solid white;
+  background-size: 160%;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+}
+
+main article#article1 div.container section#right div.container div:first-child a{
+  background-image: url("../img/USE/25-expertise_article1_img1.jpg");
+  background-position-x: -50px;
+}
+
+main article#article1 div.container section#right div.container div:nth-child(2) a{
+  background-image: url("../img/USE/26-expertise_article1_img2.jpg");
+  background-position-x: -65px;
+  background-position-y: -70px;
+}
+
+main article#article1 div.container section#right div.container div:last-child a{
+  background-image: url("../img/USE/27-expertise_article1_img3.jpg");
+  background-position-x: -80px;
+  background-position-y: -30px;
+}
+
+main article#article1 div.container section#right div.container div a:hover{
+  background-size: 150%;
+}
+
+main article#article1 div.container section#right div.container div a::before{
+  content: "Go to page";
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  background-color:  rgba(255, 68, 0, .5);
+  opacity: 0;
+  transition: all 1s;
+  position: absolute;
+  bottom: -10%;
+  left: 0;
+}
+
+main article#article1 div.container section#right div.container div a:hover::before{
+  bottom: 0;
+  opacity: 1;
+}
+
+main article#article2{
+  width: 100%;
+  margin-bottom: 160px;
 }
 
 main article#article2 section#art2_sec1{
@@ -98,35 +183,82 @@ main article#article2 section#art2_sec1 > h1, main article#article2 section#art2
 }
 
 main article#article2 section#art2_sec1 > h1{
-  padding-top: 100px;
+  padding-top: 60px;
+  padding-bottom: 30px;
 }
 
 main article#article2 section#art2_sec1 > p{
-  padding-bottom: 200px;
+  /* padding-bottom: 200px; */
+  width: 80%;
+  margin: auto;
+  padding-bottom: 30px;
+}
+
+p.-on{
+  opacity: 1;
+}
+
+p.item.-off{
+  opacity: 0;
 }
 
 main article#article2 section#art2_sec2{
-  width:1400px;
-  margin-left: 250px;
+  width:90%;
+  /* margin-left: 250px; */
   background-image: url("../img/USE/06-article2_bcg.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
-  position: relative;
-  top: -150px;
+  background-size: cover;
+  background-position-y: 80px;
+  background-attachment: fixed;
+  margin: auto;
 }
+
+main article#article2 section#art2_sec2 div.btn {
+  margin-top: -30px;
+  text-align: center;
+}
+
+main article#article2 section#art2_sec2 div.btn span{
+  display: inline-block;
+  font-size: 22px;
+  line-height: 50px;
+  width: 50px;
+  height: 50px;
+  color: white;
+  transition: all .5s;
+}
+
+main article#article2 section#art2_sec2 div.btn span.-on{
+  background-color: #ff4400;
+  border-bottom: 3px solid black;
+}
+
+main article#article2 section#art2_sec2 div.btn span.-off{
+  background-color: black;
+  border-bottom: none;
+}
+
+main article#article2 section#art2_sec2 div.btn span:hover{
+  cursor: pointer;
+  background-color: #ff4400;
+}
+
 
 main article#article2 section#art2_sec2 div.container{
   display: flex;
-  padding-top: 150px;
+  /* padding-top: 150px; */
+  padding-top: 100px;
   padding-bottom: 120px;
   justify-content: space-between;
   background-color: transparent;
 }
 
+
 main article#article2 section#art2_sec2 div.container div#item1{
-  width: 700px;
+  width: 100%;
   background-color: rgba(255, 255, 255, .7);
   padding: 50px 30px;
+  /* margin-top: 100px; */
 }
 
 
@@ -142,13 +274,36 @@ main article#article2 section#art2_sec2 div.container div#item1 a{
   text-align: center;
   line-height: 50px;
   margin-top: 50px;
-  margin-left: 230px;
+  margin-left: calc((100% - 160px) / 2);
+  transition: all .3s;
+}
+
+main article#article2 section#art2_sec2 div.container div#item1 a:hover{
+  background-color: #ff4400;
+  color: white;
+}
+
+main article#article2 section#art2_sec2 div.container  div#item1 div.p.-on{
+  opacity: 1;
+}
+
+main article#article2 section#art2_sec2 div.container  div#item1 div.p.-off{
+  opacity: 0;
+}
+
+main article#article2 section#art2_sec2 div.container  div#item1 div.p.-none{
+  display: none;
+}
+
+main article#article2 section#art2_sec2 div.container  div#item1 div.p.-block{
+  display: block;
 }
 
 main article#article2 section#art2_sec2 div.container div#item2{
-  padding-top: 200px;
+  /* padding-top: 200px; */
+  margin-top: 100px;
   position: relative;
-  left: 50px;
+  left: 40px;
 }
 
 main article#article2 section#art2_sec2 div.container div#item2 button{
@@ -160,18 +315,41 @@ main article#article2 section#art2_sec2 div.container div#item2 button{
   padding: 15px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   outline: none;
-  background-color: rgba(255,255,255,.5);
+  background-color: rgba(255,255,255,.8);
   border: none;
+  transition: all .5s;
 }
+
+main article#article2 section#art2_sec2 div.container div#item2 button.-on{
+  background-color: rgba(255,255,255, .9);
+  opacity: 1;
+}
+
+main article#article2 section#art2_sec2 div.container div#item2 button.-off{
+  opacity: 0;
+}
+
+main article#article2 section#art2_sec2 div.container div#item2 button.item_btn.-look{
+  background-color: rgba(255,255,255,1);
+  color: #ff4400;
+  border-bottom: 5px solid #ff4400;
+}
+
+main article#article2 section#art2_sec2 div.container div#item2 button.-on:hover, main article#article2 section#art2_sec2 div.container div#item2 button.-off:hover{
+  cursor: default !important;
+}
+
 
 main article#article3{
   display: flex;
   justify-content: center;
 }
 
+
 main article#article3 section#left{
   width: 620px;
   height: 895px;
+  margin-top: 35px;
   background-image: url("../img/USE/07-article3_img.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -180,8 +358,7 @@ main article#article3 section#left{
 
 main article#article3 section#right{
   width: 600px;
-  padding-top: 60px;
-  padding-left: 100px;
+  padding: 30px 30px 0 40px;
 }
 
 main article#article3 section#right h1{
@@ -195,11 +372,31 @@ main article#article3 section#right p.title{
 }
 
 main article#article3 section#right p.title:first-child{
-  margin-top: 50px;
+  margin-top: 30px;
+}
+
+main article#article3 section#right a{
+  display: inline-block;
+  width: 160px;
+  height: 60px;
+  border: 3px solid #ff4400;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ff4400;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  margin-top: 30px;
+  transition: all .3s;
+}
+
+main article#article3 section#right a:hover{
+  color: #fff;
+  background-color: #ff4400;
 }
 
 main article#article4{
-  margin: 100px auto 0;
+  margin: 160px auto 0;
   background-color: rgba(246, 246, 246);
   display: flex;
   justify-content: center;
@@ -207,8 +404,65 @@ main article#article4{
 
 main article#article4 section#right{
   background-color: white;
-  margin-top: 40px;
-  padding: 30px;
+  /* margin-top: 40px; */
+  padding: 5px 30px 30px;
+}
+
+main article#article4 section#right span.art4_btn{
+  display: inline-block;
+  padding-left: 3px;
+  width: 50px;
+  height: 50px;
+  line-height: 44px;
+  font-size: 16px;
+  color: white;
+  position: absolute;
+  top: 17%;
+  left: 0;
+  z-index: 1;
+  background-color: rgba( 0, 0, 0, .85);
+  border-top: 3px solid #ff4400;
+  border-bottom: 3px solid #ff4400;
+  transition: all .5s;
+}
+
+main article#article4 section#right span.art4_btn.-move{
+  background-color: #ff4400;
+  left: 70%;
+  border-top: none;
+  border-bottom: none;
+}
+
+main article#article4 section#right span.art4_btn:hover{
+  cursor: pointer;
+  background-color: #ff4400;
+}
+
+main article#article4 section#right span.art4_btn.-move:hover{
+  background-color:black;
+}
+
+main article#article4 section#right > div{
+  width: 800px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+
+main article#article4 section#right div img{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+main article#article4 section#right h1.topic{
+  /* margin-top: -80px; */
+  margin-bottom: 40px;
+  text-align: center;
 }
 
 main article#article4 section#right p{
@@ -219,13 +473,20 @@ main article#article4 section#right p{
 
 main article#article4 section#left{
   padding: auto 15px;
-  margin-right: 80px;
+  padding-top: 150px;
+  margin-right: 10px;
+  transition: all .5s;
+}
+
+main article#article4 section#left.-move{
+  left: 0%;
 }
 
 main article#article4 section#left a.intro{
   display: block;
   width: 350px;
   font-size: 28px;
+  color: black;
   text-align: center;
   margin-top: 20px;
   padding: 15px;
@@ -233,10 +494,18 @@ main article#article4 section#left a.intro{
   outline: none;
   background-color: rgba(255,255,255,.5);
   text-decoration: none;
+  transition: all .3s;
+}
+
+main article#article4 section#left a.intro:hover{
+  background-color: #ff4400;
+  color: #fff;
 }
 
 main article#article4 section#left a:first-child{
   margin-top: 150px;
+  color: #ff4400;
+  border-bottom: 5px solid #ff4400;
 }
 
 main article#article4 section#left a:last-child{
@@ -252,8 +521,483 @@ text-align: center;
 line-height: 50px;
 margin-top: 50px;
 margin-left: 100px;
+transition: all .3s;
 }
 
-footer section{
-  margin: 80px auto 80px;
+main article#article4 section#left a:last-child:hover{
+  background-color: #ff4400;
+  color: #fff;
+}
+
+footer{
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+
+
+/* -----------RWD */
+
+/* 320 - 575 */
+@media screen and (max-width: 575px){
+  p{
+    letter-spacing: 0;
+    font-size: 13.5px;
+    line-height: 22px;
+  }
+
+  main{
+    min-width: 320px;
+  }
+
+  main article#article1 > div.container{
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  main article#article1 div.container section#left{
+    margin-top: 0;
+    height: auto;
+    width: 100%;
+  }
+
+  main article#article1 div.container section#left iframe{
+    width: 400px;
+    height: 220px;
+  }
+
+  main article#article1 div.container section#right {
+    width: 95%;
+    background-color: rgba(255, 255, 255, .8);
+    padding: 40px 5% 80px;
+  }
+
+  /* main article#article1 div.container section#right h1.topic{
+    text-align: center;
+  } */
+  
+  main article#article1 div.container section#right div.container{
+    flex-direction: column;
+    width: 80%;
+    margin-top: 50px;
+    margin-bottom: 5px;
+  }
+
+  main article#article1 div.container section#right div.container:before{
+    font-size: 10px;
+  }
+
+  main article#article1 div.container section#right div.container div a{
+    height: 150px;
+  }
+
+  main article#article1 div.container section#right div.container div:first-child a{
+    background-position-x: 0;
+  }
+
+  main article#article1 div.container section#right div.container div:last-child a{
+    background-position-x: -60px;
+    background-position-y: -30px;
+  }
+
+  main article#article1 div.container section#right p{
+    width: 100% !important;
+    margin-bottom: 30px !important;
+  }
+
+  main article#article2 {
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  main article#article2 section#art2_sec2{
+    width: 100%;
+    background-position-x: -200px;
+  }
+
+  /* main article#article2 section#art2_sec2 div.container{
+    padding-top: 40px;
+  } */
+
+  main article#article2 section#art2_sec2 div.container div#item1{
+    padding: 30px 15px;
+  }
+
+  /* main article#article2 section#art2_sec2 div.container div#item1 a{
+    margin-left: 20%;
+  } */
+
+  main article#article2 section#art2_sec2 div.container div#item2 {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 12%;
+    z-index: 1;
+
+  }
+
+  main article#article2 section#art2_sec2 div.container div#item2 button{
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    font-size: 22px;
+  }
+
+  main article#article3 section#left {
+    width: 100%;
+    /* margin-left: 100px; */
+    background-position-x: -500px;
+  }
+
+  main article#article3 section#right {
+    width: 400px;
+    background-color: rgba(255, 255, 255, .8);
+    padding-left: 15px;
+    margin-left: -200px;
+  }
+
+  main article#article4 {
+    position: relative;
+    margin-top: 50px;
+  }
+
+  main article#article4 section#left{
+    padding-top: 70px;
+  }
+
+  main article#article4 section.art4_left{
+    background-color: rgba(246, 246, 246);
+    padding-bottom: 150px;
+    width: 70%;
+    position: absolute;
+    top: 0;
+    left: -70%;
+    z-index: 1;
+  }
+
+  main article#article4 section#left a.intro{
+    padding: 15px 5px;
+    width: 90%;
+    font-size: 16px;
+  }
+
+  main article#article4 section#left a:last-child{
+    margin-top: 30px;
+    margin-left: 15%;
+  }
+
+  main article#article4 section#right{
+    width: 100%;
+    padding: 5px 15px 30px;
+  }
+
+  main article#article4 section#right h1.topic{
+    margin-bottom: 0;
+  }
+
+  main article#article4 section#right span.art4_btn{
+    display: inline-block;
+  }
+
+  main article#article4 section#right > div{
+    width: 100%;
+    height: 180px;
+  }
+
+  main article#article4 section#right p{
+    width: 100%;
+  }
+}
+
+/* 576 - 767 */
+@media screen and (min-width: 576px) and (max-width: 767px){
+  main article#article1 > div.container{
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  main article#article1 div.container section#left{
+    margin-top: 0;
+    height: auto;
+    width: 100%;
+  }
+
+  main article#article1 div.container section#left iframe{
+    width: 400px;
+    height: 220px;
+  }
+
+  main article#article1 div.container section#right {
+    width: 90%;
+    padding: 40px 5% 80px;
+  }
+  
+  main article#article1 div.container section#right div.container{
+    flex-direction: column;
+    width: 80%;
+    margin-top: 50px;
+    margin-bottom: 5px;
+  }
+
+  main article#article1 div.container section#right div.container div a{
+    height: 200px;
+  }
+
+  main article#article1 div.container section#right div.container div:first-child a{
+    background-position-x: 0;
+  }
+
+  main article#article1 div.container section#right div.container div:last-child a{
+    background-position-x: 0;
+    background-position-y: 0px;
+  }
+
+  main article#article1 div.container section#right div.container p{
+    width: 100% !important;
+    margin-top: 0 !important;
+    margin-bottom: 30px !important;
+  }
+
+  main article#article2 section#art2_sec2{
+    width: 100%;
+  }
+
+  main article#article2 section#art2_sec2 div.container{
+    padding-top: 40px;
+  }
+
+  /* main article#article2 section#art2_sec2 div.container div#item1 a{
+    margin-left: 38%;
+  } */
+
+  main article#article2 {
+    position: relative;
+
+  }
+
+  /* main article#article2 section#art2_sec2{
+    background-position-x: -200px;
+  } */
+
+  main article#article2 section#art2_sec2 div.container div#item2 {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 130px;
+    z-index: 1;
+
+  }
+
+  main article#article2 section#art2_sec2 div.container div#item2 button{
+    position: absolute;
+    top: 30px;
+
+    width: 100%;
+    font-size: 22px;
+  }
+
+  main article#article3{
+  }
+
+  main article#article3 section#left {
+    width: 100%;
+    background-position-x: -500px;
+  }
+
+  main article#article3 section#right {
+    background-color: rgba(255, 255, 255, .8);
+    padding-left: 15px;
+    margin-left: -500px;
+  }
+
+  main article#article4 {
+    position: relative;
+  }
+
+  main article#article4 section.art4_left{
+    background-color: rgba(246, 246, 246);
+    padding-bottom: 150px;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: -50%;
+    z-index: 1;
+  }
+
+  main article#article4 section#left a.intro{
+    padding: 15px 5px;
+    width: 260px;
+    font-size: 22px;
+  }
+
+  main article#article4 section#left a:last-child{
+    margin-left: 50px;
+  }
+
+  main article#article4 section#right{
+    width: 100%;
+  }
+
+  main article#article4 section#right span.art4_btn{
+    display: inline-block;
+  }
+
+  main article#article4 section#right > div{
+    width: 100%;
+  }
+
+  main article#article4 section#right p{
+    width: 100%;
+  }
+}
+
+/* 768 - 991 */
+@media screen and (min-width: 768px) and (max-width: 991px){
+  main article#article1 > div.container{
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  main article#article1 div.container section#left{
+    margin-top: 0;
+    height: auto;
+    width: 100%;
+  }
+
+  main article#article1 div.container section#left iframe{
+    width: 400px;
+    height: 220px;
+  }
+
+  main article#article1 div.container section#right {
+    width: 80%;
+    padding: 40px 5% 80px;
+  }
+  
+  main article#article1 div.container section#right div.container{
+    width: 510px;
+  }
+
+  main article#article1 div.container section#right div.container p{
+    width: 170px;
+  }
+
+  main article#article2 section#art2_sec2 div.btn span{
+    display: none;
+  }
+
+  main article#article2 section#art2_sec2{
+    width: 100%;
+  }
+
+  /* main article#article2 section#art2_sec2 div.container div#item1 a{
+    margin-left: 30%;
+  } */
+
+  
+  main article#article2 section#art2_sec2 div.container div#item2{
+    left: 0;
+    margin-left: 30px;
+  }
+
+  main article#article2 section#art2_sec2 div.container div#item2 button{
+    width:300px;
+    font-size: 22px;
+  }
+
+  main article#article3 section#left {
+    width: 35%;
+    background-position-x: -450px;
+  }
+
+  main article#article3 section#right {
+    padding-left: 15px;
+  }
+
+  main article#article4 section#left{
+    width: 35%;
+  }
+
+  main article#article4 section#left a.intro{
+    padding: 15px 5px;
+    width: 260px;
+    font-size: 22px;
+  }
+
+  main article#article4 section#left a:last-child{
+    margin-left: 50px;
+  }
+
+  main article#article4 section#right{
+    width: 100%;
+  }
+
+  main article#article4 section#right > div{
+    width: 100%;
+  }
+
+  main article#article4 section#right p{
+    width: 100%;
+  }
+}
+
+/* 992 - 1199 */
+@media screen and (min-width: 992px) and (max-width: 1199px){
+  main article#article1 div.container section#right{
+    padding: 40px 20px 80px;
+  }
+
+  main article#article1 div.container section#right div.container p{
+    width: 195px;
+  }
+
+  main article#article2 section#art2_sec2 div.btn span{
+    display: none;
+  }
+
+  main article#article2 section#art2_sec2 div.container div#item1 a{
+    margin-left: 35%;
+  }
+
+  main article#article2 section#art2_sec2 div.container div#item2 button.item_btn.-on:hover{
+    cursor: pointer !important;
+  }
+
+  main article#article3 section#left {
+    width: 40%;
+  }
+
+  main article#article4 section#left{
+    width: 35%;
+  }
+
+  main article#article4 section#left a.intro{
+    padding: 15px 5px;
+  }
+
+  main article#article4 section#right{
+    width: 65%;
+  }
+
+  main article#article4 section#right > div{
+    width: 100%;
+  }
+
+  main article#article4 section#right p{
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  main article#article2 section#art2_sec2 div.btn span{
+    display: none;
+  }
+
+  main article#article2 section#art2_sec2 div.container div#item2 button.item_btn.-on:hover{
+    cursor: pointer !important;
+    background-color: rgba( 255, 68, 0, 100%);
+    color: white;
+  }
 }

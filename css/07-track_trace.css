@@ -1,68 +1,623 @@
 @import url(../css/nav.css);
 @import url(../css/footer.css);
 
-
-p.intro{
-  border: 1px solid blue;
-  width: 300px;
+*{
+  /* border: 1px solid blue; */
 }
 
+p.intro{
+  width: 100%;
+}
+
+nav{
+  background-color: rgba(11, 34, 63, .98);
+}
+
+nav > div{
+  background-color: rgba(11, 34, 63, .98);
+}
+
+nav div div.hamburger span{
+  background-color: #000;
+}
+
+nav ul.top_nav{
+  background-color: rgba(11, 34, 63, .98);
+}
+
+nav ul.top_nav.-on{
+  background-color: rgba(11, 34, 63, .9);
+}
+
+nav ul.top_nav > li a{
+  color:white;
+}
+
+nav ul.top_nav li:hover > a, nav ul.top_nav li.multiple:hover{
+  color: white;
+  text-shadow: 0 3px 3px rgb(255, 255, 255);
+}
+
+nav ul.top_nav li.nav_icon a{
+  border: none;
+}
+
+nav ul.top_nav li#nav_icon1 a{
+  background-image: url("../img/USE/40-icon_search_2.PNG");
+}
+
+nav ul.top_nav li#nav_icon2 a{
+  background-image: url("../img/USE/41-icon_trace_2.PNG");
+  border-bottom: 4px solid #0b223f;
+  opacity: 1;
+}
+
+nav ul.top_nav li#nav_icon3 a{
+  background-image: url("../img/USE/42-icon_member_2.PNG");
+}
+
+nav ul.top_nav li.multiple ul.multiple{
+  border-color: #010d1c;
+  background-color: #010d1c;
+}
+
+nav ul.top_nav li.multiple ul.multiple li {
+  border-color: #010d1c;
+  background-color: #95b6de;
+}
+
+nav ul.top_nav li.multiple ul.multiple li:hover{
+  background-color: #010d1c;
+}
+
+nav ul.top_nav li.multiple ul.multiple li a{
+  color: #000;
+}
+
+
 main{
+  width: 100%;
+  /* min-width: 1200px; */
   background-image: url(../img/USE/13-track_bcg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-
+  background-attachment: fixed;
+  margin-top: -95px;
 }
 
 main div.container{
   width: 100%;
-  padding-top: 150px;
-  padding-bottom: 500px;
+  padding: 10%;
   display: flex;
-  justify-content: center;
-  border: 1px solid red;
-  background: linear-gradient(140deg, rgba(0, 0, 0, .41)  50%, transparent 50%);
+  flex-direction: column;
+  align-items: center;
+  /* background: linear-gradient(140deg, rgba(0, 0, 0, .41)  50%, transparent 50%); */
 }
+
 
 main div#left{
-  width: 600px;
-  position: relative;
+  display: inline-block;
+  text-align: center;
+  margin-top: 100px;
+  /* width: 600px; */
+  /* position: relative;
   left: 100px;
-  bottom: 60px;
+  bottom: 60px; */
+  /* position: absolute; */
   z-index: 1;
+  box-shadow: 0px 5px 10px 0 rgba(0, 0, 0, .5);
 }
 
-main div#right{
-  width: 850px;
-  background-color: rgba(255, 68, 0 , .66);
-  position: relative;
-  right: 80px;
-  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, .5);
+
+main div div#left ul{
+  width: 700px;
+  padding-top: 10px;
 }
 
-main div ul li{
+main div div#left ul.-on{
+  width: 680px;
+}
+
+main div div#left ul li{
   display: inline-block;
   /* background-image: url(../img/USE/14-track_img.jpg); */
   vertical-align: top;
-  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, .5);
   opacity: .8;
 }
 
-main div ul li a{
+main div div#left ul li.-opacity{
+  opacity: 1;
+}
+
+main div div#left ul li a{
   display: inline-block;
-  width: 250px;
-  height: 250px;
+  width: 220px;
+  height: 180px;
+  padding-top: 60px;
+  /* line-height: 100px; */
   font-size: 20px;
   font-weight: 700;
   letter-spacing: .5px;
   word-break: break-word;
   hyphens: auto;
   text-align: center;
-  background-color: rgba(201, 201, 201, .77);
-  padding: 100px 30px;
-  color: rgba(0, 0, 0, .5);
+  background-color: rgba(201, 201, 201, .5);
+  /* padding: 70px 10px; */
+  color: rgba(0, 0, 0, .6);
+  transition: background-color .5s, color .5s;
 }
 
-/* main div ul li:last-child a{
-  color: black;
+main div div#left ul li a.-on{
+  font-size: 16px;
+  height: 80px;
+  padding-top: 12px;
+  background-color: rgba(201, 201, 201, .8);
+}
+
+main div div#left ul li a.-color{
+  background-color: rgb(11, 36, 65);
+  color: white;
+  border-bottom: 5px solid #ff4400;
+  border-top: 5px solid #ff4400;
+}
+
+main div.container div#left ul li:hover{
+  opacity: 1;
+}
+
+main div.container div#left ul li:hover a{
+  background-color: rgb(11, 36, 65);
+  color: white;
+}
+
+main div#right{
+  width: 100%;
+  background-color: rgba(11, 36, 65, .9);
+  /* position: relative;
+  right: 80px; */
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, .5);
+  margin-top: -50px;
+  opacity: 0;
+  transform: translateY(100px);
+  z-index: -1;
+  visibility: hidden;
+  transition: opacity .5s, transform 2s;
+}
+
+main div#right.-on{
+  opacity: 1;
+  transform: translateY(0px);
+  z-index: 0;
+  visibility: visible;
+}
+
+/* ------- form 表單 --------- */
+
+main div#right > div{
+  width: 100%;
+  padding: 100px 0;
+  opacity: 0;
+  transform: translateY(100px);
+  z-index: -1;
+  visibility: hidden;
+  transition: opacity .5s, transform 2s;
+}
+
+main div#right > div.-on{
+  opacity: 1;
+  transform: translateY(0px);
+  z-index: 0;
+  visibility: visible;
+}
+
+main div#right > div.-off{
+  display: none;
+}
+
+main div#right div div{
+  text-align: center;
+  position: relative;
+}
+
+main div#right div div span.bread{
+  display: inline-block;
+  font-size: 14px;
+  color: #95b6de;
+  text-align: left;
+  position: absolute;
+  top: -30px;
+  left: 10%;
+}
+
+main div#right div.form div div form{
+  text-align: center;
+}
+
+main div#right div.form div div form section{
+  width: 100%;
+}
+
+main div#right div.form div div form section label, main div#right div.form div div form section input{
+  display: inline-block;
+  font-size: 18px;
+  outline: none;
+  margin: 15px 5px;
+  vertical-align: middle;
+}
+
+main div#right div.form div div form section label{
+  width: 65%;
+  color: white;
+  text-align: left;
+  margin-left: 30px;
+}
+
+main div#right div.form div div form section.alert_span{
+  padding: 0 20%;
+  display: flex;
+  justify-content: center;
+}
+
+
+main div#right div.form div div form section span.alert{
+  display: inline-block;
+  font-size: 16px;
+  text-align: left;
+  color: red;
+  position: relative;
+  border-bottom: 5px double rgb(11, 36, 65);
+  border-top: 5px double rgb(11, 36, 65);
+  background-color: rgba(255, 255, 255, .6);
+  padding: 5px 0;
+}
+
+main div#right div.form div div form section span.alert:first-child{
+  width: 5%;
+  text-align: center;
+}
+
+main div#right div.form div div form section span.alert:last-child{
+  width: 95%;
+}
+
+@keyframes shake{
+  0%{
+      left: 0;
+  }
+  
+  40%,80%{
+      left: 10px;
+  }
+
+  20%,60%{
+      left: -10px;
+  }
+
+  100%{
+      left: 0;
+  }
+}
+
+main div#right div.form div div form section span.alert.-error{
+  animation-name: shake;
+  animation-duration: 1s;
+} 
+
+main div#right div.form div form section button{
+  font-size: 22px;
+  width: 150px;
+  padding: 10px 30px;
+  margin: 15px 0;
+  color: white;
+  background-color: #ff4400;
+  border: 1px solid #ff4400;
+
+}
+
+/* TODO:完成FORM表單 */
+main div#right > div.form1 > div.first > div.rule{
+  margin-top: 50px;
+  border: 30px solid rgb(11, 36, 65);
+  width: 80%;
+  margin: auto;
+  height: 300px;
+  overflow-y: scroll;
+}
+
+main div#right > div.form1 > div.first  > div.rule:first-child{
+  border-bottom: none;
+}
+
+main div#right > div.form1 > div > div > p.intro{
+
+  padding: 30px 20px;
+  background-color: #95b6de;
+  text-align: left;
+}
+
+main div#right div.form1 div div form section label.agree1, main div#right div.form1 div div form section input#agree1{
+  margin-top: 30px;
+}
+
+main div#right div.form1 div div form section label.agree2, main div#right div.form1 div div form section input#agree2{
+  margin-bottom: 30px;
+}
+
+
+
+/* main div#right div.form div.step1.-on{
+  display: block;
 } */
+
+main div#right div.form div div.step1.-off{
+  display: none;
+}
+
+main div#right div.form div form section label.tittle{
+  text-align: center;
+  padding:10px 0;
+  border-bottom: 5px double black;
+  background-color: rgb(11, 36, 65);
+}
+
+main div#right div.form div form section.step2.btn, main div#right div.form div form section.step3.btn{
+  display: flex;
+  justify-content: center;
+}
+
+main div#right div.form div form section.step2.btn button:first-child, main div#right div.form div form section.step3.btn button:first-child{
+  margin-right: 80px;
+}
+
+div.-step_on{
+  display: block;
+}
+
+div.-step_off{
+  display: none !important;
+}
+
+main div#right > div.form2,  main div#right > div.form3, main div#right > div.form4, main div#right > div.form5, main div#right > div.form6{
+  width: 100%;
+  height: 300px;
+  margin: auto;
+  background-color: none;
+
+}
+
+main div#right > div.form2 form, main div#right > div.form3 form, main div#right > div.form4 form, main div#right > div.form5 form, main div#right > div.form6 form{
+  font-size: 28px;
+  color: white;
+  text-align: center;
+}
+
+/* -------- 結束 form ----------- */
+
+
+
+
+
+footer{
+  padding-top: 100px;
+  padding-bottom: 80px;
+  background-color: transparent;
+}
+
+footer article section h4.footer, footer article section p.footer,footer article section#sec1 div a{
+  color: white;
+  /* font-weight: 700; */
+  transition: color .5s;
+}
+
+footer article section#split{
+  background-color: white;
+  transition: background-color .5s;
+}
+
+footer article section#sec1 button pre{
+  color: white;
+  transition: color .5s;
+}
+
+footer article section#sec1 button{
+  border: 1px solid white;
+  transition: border-color .5s;
+}
+
+footer section#sec3 button.button{
+  color: white;
+  border: 1px solid white;
+  transition: color .5s, border-color .5s;
+}
+
+footer section#sec3 button.top{
+  background-color: #0b223f;
+  border: 1px solid #0b223f;
+  transition: color .5s, border-color .5s;
+}
+
+footer section#sec3 button.button:hover {
+  border-color: #ff4400;
+  color:  #ff4400;
+}
+
+footer section#sec3 button.top:hover{
+  border-color: #ff4400;
+  color:  #ff4400;
+}
+
+footer section#sec3 button.top:hover::after{
+  color:  #ff4400;
+  border-bottom-color: #ff4400;
+}
+
+[data-aos="bcg_color"] {
+  background: transparent;
+  transition-property: background;
+}
+
+[data-aos="bcg_color"].aos-animate {
+  background: rgba(0, 0, 0, .7);
+}
+
+/* 320 - 575 */
+@media screen and (max-width: 575px){
+  main{
+    background-position-x: 50%;
+  }
+
+  p.intro{
+    letter-spacing: 0;
+  }
+
+  main div.container{
+    padding: 10% 3%;
+  }
+
+  main div div#left ul{
+    width: 300px;
+  }
+
+  main div div#left ul.-on{
+    width: 300px;
+  }
+
+  main div div#left ul li a.-on{
+    width: 135px;
+    height: 60px;
+    font-size: 12px;
+    padding-top: 8px;
+  }
+
+  main div#right div div span.bread{
+    font-size: 12px;
+    left: 6%;
+  }
+
+  main div#right > div.form1 > div.first > div.rule {
+    width: 100%;
+  }
+
+  main div#right > div.form1 > div > div > p.intro{
+    padding: 10px;
+  }
+
+  main div#right div.form1 div div form section label.agree1, main div#right div.form1 div div form section input#agree1{
+    margin-top: 0;
+  }
+
+  main div#right div.form div div form section label, main div#right div.form div div form section input {
+    font-size: 13.5px;
+  }
+
+  main div#right div.form div div form section label{
+    width: 80%;
+    margin-left: 15px;
+  }
+
+  main div#right div.form div div form section.alert_span{
+    padding: 0 8%;
+  }
+
+  main div#right div.form div div form section span.alert{
+    font-size: 13.5px;
+  }
+
+  main div#right div.form div form section button {
+    font-size: 18px;
+    width: 100px;
+
+  }
+
+  main div#right div.form div form section.step2.btn button:first-child, main div#right div.form div form section.step3.btn button:first-child{
+    margin-right: 50px;
+  }
+}
+
+/* 576 - 767 */
+@media screen and (min-width: 576px) and (max-width: 767px){
+  p.intro{
+    letter-spacing: 0;
+  }
+
+  main{
+    background-position-x: 50%;
+  }
+
+  main div div#left ul{
+    width: 500px;
+  }
+
+  main div div#left ul.-on{
+    width: 530px;
+  }
+
+  main div div#left ul li a.-on{
+    width: 160px;
+    height: 60px;
+    font-size: 13.5px;
+    padding-top: 8px;
+  }
+
+  main div#right div div span.bread{
+    font-size: 12px;
+  }
+
+  main div#right > div.form1 > div.first > div.rule {
+    width: 100%;
+  }
+
+  main div#right > div.form1 > div > div > p.intro{
+    padding: 10px;
+  }
+
+  main div#right div.form1 div div form section label.agree1, main div#right div.form1 div div form section input#agree1{
+    margin-top: 0;
+  }
+
+  main div#right div.form div div form section label, main div#right div.form div div form section input {
+    font-size: 16px;
+  }
+
+  main div#right div.form div div form section label{
+    width: 80%;
+    margin-left: 15px;
+  }
+
+  main div#right div.form div div form section.alert_span{
+    padding: 0 8%;
+  }
+
+  main div#right div.form div div form section span.alert{
+    font-size: 14px;
+  }
+
+  main div#right div.form div form section button {
+    font-size: 18px;
+    width: 100px;
+
+  }
+
+  main div#right div.form div form section.step2.btn button:first-child, main div#right div.form div form section.step3.btn button:first-child{
+    margin-right: 50px;
+  }
+}
+
+/* 768 - 991 */
+@media screen and (min-width: 768px) and (max-width: 991px){
+  main{
+    background-position-x: 50%;
+  }
+}
+
+/* 992 - 1199 */
+@media screen and (min-width: 992px) and (max-width: 1199px){
+  main{
+    background-position-x: 50%;
+  }
+}
+
+/* 1200 - */
+@media screen and (min-width: 1200px){
+
+}

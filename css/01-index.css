@@ -1,126 +1,142 @@
 @import url(./nav.css);
 @import url(./footer.css);
-
+ 
 *  {
   box-sizing: border-box ! important;
+  /* outline: 1px solid red; */
+  /* border: 1px solid blue; */
 }
 
 header{
   width: 100%;
-  height: 1080px;
+  min-width: 320px;
+  /* max-width: 100%; */
+  height: 100vh;
+  min-height: 1080px;
   position: relative;
   background-image: url("../img/USE/01-home_banner.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: bottom;
+  padding-top: 220px;
 }
 
-header ul.animation_text > li{
+header div{
+  width: 100%;
+}
+
+header div > div span.space{
+  font-size: 80px;
+  color: transparent;
+}
+
+/* ==== 文字動畫start ==== */
+header div div.animation_text{
+  /* display: inline-block; */
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+
+header div div.animation_text span.animation_title{
   display: inline-block;
-  width: 1200px;
-  position: relative;
-  transform: translate(400px,300px);
 }
 
-header ul.animation_text li.animation_title{
-  font-size: 100px;
-}
-
-header ul.animation_text li.animation_p{
-  font-size: 60px;
-  color: white;
-}
-
-header ul.animation_text li#animation_title0{
-  position: absolute;
-}
-
-header ul.animation_text li#animation_title1{
-  position: absolute;
-}
-
-header ul.animation_text li#animation_title2{
-  position: absolute;
-}
-
-header ul.animation_text li#animation_title3{
-  position: absolute;
-}
-
-header ul.animation_text li#animation_p1{
-  position: absolute;
-}
-
-header ul.animation_text li#animation_p2{
-  position: absolute;
-}
-
-header ul.animation_text li#animation_p3{
-  position: absolute;
-}
-
-header form label.banner_track, header form input#banner_track{
+.animation_title .letter {
+  /* line-height: 1rem; */
   display: inline-block;
-  font-size: 20px;
-  height: 73px;
-  border-radius: 49px;
+  font-size: 80px;
 }
+
+/* ==== 文字動畫end ==== */
+
+/* header div ul.animation_text{
+  width: 80%;
+  margin: auto;
+} */
+
+/* header div ul.animation_text > li{
+  display: inline-block;
+} */
+
+/* header div ul.animation_text li.animation_title{
+  font-size: 80px;
+} */
 
 header form.banner_track{
-  /* outline: 1px solid green; */
-  vertical-align: top;
-  width: 574px;
-  position: absolute;
+  width: 543px;
   margin: auto;
-  top: 650px;
-  left: 673px;
+  margin-top: 250px;
+  vertical-align: top;
+  position: relative;
+}
+
+
+header form label.banner_track, header form input#banner_track{
+  font-size: 20px;
+  padding: 25px 0px;
+  border-radius: 49px;
+  border: none;
 }
 
 header form label.banner_track{
-  width: 146px;
   background-color: rgba(52, 52, 52, .5);
+  width:  150px;
   color: rgba(255, 255, 255, .5);
   text-align: center;
-  line-height: 73px;
-  vertical-align: top;
   position: absolute;
-  right: 0;
+  right: 0px;
+  transition: all .3s;
+}
+
+header form label.banner_track:hover{
+  cursor: pointer;
+  background-color: rgba(52, 52, 52, .9);
 }
 
 header form input#banner_track{
-  width: 573px;
-  outline: none;
-  /* outline: 1px solid green; */
+  /* padding: 25px 285px; */
+  width: 100%;
   background-color: rgba(255, 255, 255, .2);
   padding-left: 40px;
-  vertical-align: top;
   color: rgba(255, 255, 255, .5);
-  border: none;
   box-shadow: 4px 3px 10px 1px rgba(0, 0, 0, .2);
+  transition: all .3s;
+}
+
+header form input#banner_track:focus{
+  background-color: rgba(255, 255, 255, .5);
+  color: rgba(255, 255, 255, 100%);
+
 }
 
 header div.banner_news{
   text-align: center;
-  outline: 1px solid red;
-  position: absolute;
-  bottom: 0;
-  left: 252px;
+  vertical-align: bottom;
 }
 
-header div.banner_news p.banner_news_title{
+header div.banner_news em p.banner_news_title{
   display: inline-block;
-  width: 1134px;
-  height: 113px;
+  width: 800px;
+  /* height: 113px; */
+  margin-top: 180px;
   font-size: 30px;
   color: rgb(248, 131, 47);
   word-break: break-word;
   hyphens: auto;
-  background-color: rgb(74, 70, 68);
+  /* background-color: rgb(74, 70, 68); */
 }
 
-header div.banner_news a.banner_news_button{
+header div.banner_news em a.banner_news_button{
   font-size: 20px;
   color: rgb(248, 131, 47);
+  border-bottom: 1px solid rgb(248, 131, 47);
+  transition: all .3s;
+}
+
+header div.banner_news em a.banner_news_button:hover{
+  color: black;
+  border-bottom-color: black;
 }
 
 header div.banner_news span.banner_news_split{
@@ -128,200 +144,354 @@ header div.banner_news span.banner_news_split{
   width: 88px;
   height: 1px;
   background-color: rgb(248, 131, 47);
+  transform: translate(-5px, -35px)  rotate(115deg);
 }
-
-
 
 main{
   width: 100%;
+  /* min-width: 1200px; */
   position: relative;
+  overflow: hidden;
 }
 
 main article{
   width: 100%;
-  margin-top: 200px;
-  min-width: 1920px;
+  margin-top: 150px;
+}
+
+/* TODO:背景圖重製 */
+main article#article1{
+  width: 100%;
+  background-image: url("../img/USE/02-article_bcg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-bottom: 150px;
 }
 
 main article section{
   text-align: center;
-
+  position: relative;
 }
 
-main article#article1{
-  background-image: url("../img/USE/02-article_bcg.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 1400px;
+main article section div.earth_div{
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+
+main article section div div.earth{
+  width: 100%;
+  position: absolute;
+  top: -100px;
+}
+
+main article section div div.earth canvas{
+  margin: auto;
+}
+
+main article#article1 section > div h1.topic,main article#article3 section> div > h1.topic{
+  text-align: center;
+  position: relative;
+}
+
+main article#article1 section > div h1.topic::before,main article#article3 section > div > h1.topic::before{
+  content: "";
+  display: inline-block;
+  width: 12vw;
+  height: 3px;
+  background-color: #ff4400;
+  vertical-align: middle;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+
+main article#article3 section > div > h1.topic{
+  width: 600px;
+  text-align: left;
+  padding-left: 30%;
+}
+main article#article3 section > div > h1.topic::before{
+  width: 10vw;
+  min-width: 12%;
+}
+
+main article#article2 section > div > h1.topic, article#article4 section div > h1.topic{
+  text-align: center;
+  position: relative;
+}
+
+main article#article2 section div h1.topic::after, article#article4 section div > h1.topic::after{
+  content: "";
+  display: inline-block;
+  width: 25vw;
+  min-width: 220px;
+  height: 3px;
+  background-color: #ff4400;
+  vertical-align: middle;
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+
+main article#article4 section div > h1.topic::after{
+  min-width: 300px;
 }
 
 main article#article1 section p#art1_intro{
-  /* outline: 1px solid red; */
   width: 800px;
   padding: 30px 0;
   margin: auto;
 }
 
-main article#article1 section ul#art1_link li.art_link_text > a{
+main article#article1 section ul#art1_link > li > div a.art_link_text{
   display: inline-block;
-  padding: 25px 30px;
-  padding-left: 80px;
-  font-size: 16px;
+  padding: 20px 30px;
+  padding-left: 40px;
+  font-size: 22px;
+  /* font-weight: 400; */
+  letter-spacing: 1px;
   color: #ff4400;
   text-decoration: none;
   text-align: center;
   background-color: rgba(255, 255, 255, .77);
+  border: 1px solid transparent;
   border-radius: 50px;
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, .2);
+  position: absolute;
+  right: -50px;
+  top: 20px;
+  z-index: 1;
+  transition: all 1s;
+}
+
+main article#article1 section ul#art1_link li > div > div:hover + a.art_link_text{
+  background-color: rgba(0, 0, 0, 100%);
+  color: #fff;
+  transform: scale(1.07);
+}
+
+main article#article1 section ul#art1_link li > div a.art_link_text.-on{
+  background-color: rgba(0, 0, 0, 100%);
+  color: #fff;
+}
+
+main article#article1 section ul#art1_link > li > div a#art_link_text_lb{
+  right: -60px;
+  top: 300px;
+}
+
+main article#article1 section ul#art1_link > li > div a#art_link_text_rb{
+  right: -80px;
+  top: 300px;
+}
+
+main article#article1 section ul#art1_link > li > div a#art_link_text_mid{
+  right: -80px;
+  top: 300px;
+}
+
+@keyframes move{
+  0% {
+    top: 0;
+  }
+
+  100%{
+    top: 30px;
+  }
 }
 
 main article#article1 section ul#art1_link{
+  width: 100%;
+  /* min-width: 1200px; */
+  padding-top: 50px;
   position: relative;
-  text-align: center;
+  animation: move 3s linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: backwards;
+  animation-direction: alternate;
 }
 
 main article#article1 section ul#art1_link > li{
+  display: block;
+  width: 100%;
+  /* width: 1200px; */
+  position: relative;
+  margin: 0 auto;
+
+}
+
+main article#article1 section ul#art1_link > li:nth-child(2){
+  display: block;
+}
+
+main article#article1 section ul#art1_link > li > div{
   display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin: 0 90px;
 }
 
-main article#article1 section ul#art1_link li.art_link_text{
+main article#article1 section ul#art1_link li > div > div a.art1_link_img{
   display: inline-block;
-  position: absolute;
-  z-index: 1;
-}
-
-main article#article1 section ul#art1_link li#art_link_text_lt{
-  top: 90px;
-  left: 630px;
-}
-
-
-main article#article1 section ul#art1_link li#art_link_text_lb{
-  top: 860px;
-  left: 600px;
-}
-
-main article#article1 section ul#art1_link li#art_link_text_mid{
-  top: 590px;
-  right: 700px;
-}
-
-main article#article1 section ul#art1_link li#art_link_text_rt{
-  top: 140px;
-  right: 450px;
-}
-
-main article#article1 section ul#art1_link li#art_link_text_rb{
-  top: 920px;
-  right: 430px;
-}
-
-main article#article1 section ul#art1_link li ul.art1_link_img > li > a{
-  display: inline-block;
-  width: 280px;
-  height: 280px;
-  background-color: orange;
+  width: 400px;
+  height: 400px;
+  border: 10px solid #ff4400;
   border-radius: 100%;
+  vertical-align: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 5px 10px 10px 0 rgba(0, 0, 0, .5);
+  transition: all 1s;
 }
 
-main article#article1 section ul#art1_link li ul.art1_link_img > li > a.art1_link_lt{
-  width: 300px;
-  height: 300px;
+main article#article1 section ul#art1_link li > div > div a.art1_link_lt{
+  background-image: url(../img/USE/04-article1_link1.jpg);
 }
 
-main article#article1 section  ul#art1_link li ul.art1_link_img > li > a.art1_link_rt{
-  width: 250px;
-  height: 250px;
+main article#article1 section ul#art1_link li > div > div a.art1_link_rt{
+  background-image: url(../img/USE/04-article1_link2.jpg);
 }
 
-main article#article1 section ul#art1_link li ul.art1_link_img > li > a.art1_link_mid{
-  width: 350px;
-  height: 350px;
+main article#article1 section ul#art1_link li > div > div a.art1_link_mid{
+  background-image: url(../img/USE/04-article1_link5.jpg);
+  background-position-x: -30px;
 }
 
-main article#article1 section ul#art1_link li ul li a.cover{
-  background-color: rgba(255, 68, 0, .66);
+main article#article1 section ul#art1_link li > div > div a.art1_link_lb{
+  background-image: url(../img/USE/04-article1_link4.jpg);
+  background-position-x: -100px;
+}
+
+main article#article1 section ul#art1_link li > div > div a.art1_link_rb{
+  background-image: url(../img/USE/04-article1_link3.jpg);
+}
+
+
+main article#article1 section ul#art1_link li > div > div:hover a.art1_link_img{
+  border-color: black;
+  transform: scale(1.07);
+}
+
+main article#article1 section ul#art1_link li > div > div a.-on{
+  border-color: black !important;
+}
+
+
+main article#article1 section ul#art1_link li > div > div a.cover{
+  display: inline-block;
+  width: 400px;
+  height: 400px;
+  border-radius: 100%;
+  background-color: rgba(255, 68, 0, .33);
   position: absolute;
-  top: 0;
-  display: none;
+  left: 0;
+  z-index: 1;
+  clip-path: circle(100%);
+  transition: clip-path 1s;
 }
 
-main article#article1 section ul#art1_link li ul#art1_link_lt{
-  position: relative;
-  top: 30px;
-  left: 200px;
+main article#article1 section ul#art1_link li > div > div:hover > a.cover{
+  clip-path: circle(0% at 100% 0%);
+  box-shadow: 5px 5px 20px 0 rgba(255, 255, 255, .8);
 }
 
-main article#article1 section ul#art1_link li ul#art1_link_lb{
-  position: relative;
-  top: 600px;
-  right: 100px;
+main article#article1 section ul#art1_link li:nth-child(2) div div:hover > a.cover, main article#article1 section ul#art1_link li:nth-child(3) div div:hover > a.cover{
+  clip-path: circle(0% at 100% 100%);
+  box-shadow: -5px 5px 20px 0 rgba(255, 255, 255, .3);
 }
 
-main article#article1 section ul#art1_link li ul#art1_link_mid{
-  position: relative;
-  top: 360px;
-  right: 80px;
+main article#article1 section ul#art1_link li > div > div a.cover.-on{
+  border-color: black !important;
+  clip-path: circle(0% at 50% 50%);
 }
-
-main article#article1 section ul#art1_link li ul#art1_link_rt{
-  position: relative;
-  top: 60px;
-  right: 50px;
-}
-
-main article#article1 section ul#art1_link li ul#art1_link_rb{
-  position: relative;
-  top: 650px;
-  right: 320px;
-}
-
-/* main article#article2{
-  margin-top: 1000px;
-} */
 
 main article#article2 section#art2_sec1{
-  position: relative;
   width: 100%;
-  margin-bottom: 820px;
+  margin-bottom: 100px;
 }
 
 main article#article2 ul.art2_imgshow{
-  /* outline: 1px solid red; */
   margin: 50px auto;
-  position: absolute;
-  left: 412px;
 }
 
-/* main article#article2 ul.art2_imgshow > li{
-  outline: 1px solid green;
-} */
-
-main article#article2 ul.art2_imgshow > li img{
-  /* outline: 1px solid black; */
+main article#article2 ul.art2_imgshow > li.img{
   display: inline-block;
   width: 1096px;
   height: 508px;
-  background-color: grey;
+  overflow: hidden;
+  position: relative;
+}
+
+main article#article2 ul.art2_imgshow > li.img img{
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 main article#article2 ul.art2_imgshow > li h3.art2_imgshow_intro{
-  /* outline: 1px solid blue; */
+  display: inline-block;
   margin: 20px auto;
+  position: relative;
+}
+
+main article#article2 ul.art2_imgshow > li h3.art2_imgshow_intro::before{
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 5px;
+  background-color: red;
+  position: absolute;
+  bottom: -5px;
+  left: 1.8px;
 }
 
 main article#article2 ul.art2_imgshow > li p{
   width:550px;
   margin: auto;
+  position: relative;
 }
 
-main article#article2 ul.art2_imgshow li.span{
+main article#article2 ul.art2_imgshow > li.intro{
+  position: relative;
+}
+
+main article#article2 ul.art2_imgshow > li span.intro{
   display: inline-block;
-  /* outline: 1px solid yellow; */
-  width: 100px;
-  height: 10px;
-  background-color: yellow;
+  border: 20px solid #ff4400;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  border-top-color: transparent;
+  position: absolute;
+  bottom: 10px;
+  transition: all .3s;
 }
 
+main article#article2 ul.art2_imgshow > li span.intro:hover{
+  cursor: pointer;
+}
+
+main article#article2 ul.art2_imgshow > li span#span1{
+  left:250px;
+}
+
+main article#article2 ul.art2_imgshow > li span#span2{
+  border: 20px solid #ff4400;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-top-color: transparent;
+  right: 250px;
+}
+
+main article#article2 ul.art2_imgshow > li span#span1:hover{
+ border-right-color: black;
+}
+
+main article#article2 ul.art2_imgshow > li span#span2:hover{
+  border-left-color: black;
+}
 
 main article#article2 ul#art2_imgshow_1 ~ ul{
   z-index: -1;
@@ -335,59 +505,58 @@ main article#article2 section a{
   border: 3px solid #ff4400;
   font-size: 16px;
   font-weight: 700;
-  color: #ff4400;
+  color: rgba(255, 68, 0, 100%);
   text-decoration: none;
   text-align: center;
   line-height: 50px;
+  background-color: rgba(255, 68, 0 , 0%);
+  transition: background-color .3s, color .3s;
 }
 
-main article#article2 section a#sec1{
-  position: relative;
-  top: 750px;
+main article#article2 section a:hover{
+  background-color: rgba(255, 68, 0, 100%);
+  color: rgba(255, 255, 255, 100%);
 }
 
 main article#article2 section#art2_sec2{
   background-color: #ff4400;
-  margin-bottom: 100px;
-}
-
-/* main article#article2 section#art2_sec2 ul#art2_browse{
-  outline: 1px solid black;
-} */
-
-main article#article2 section#art2_sec2 ul#art2_browse > li{
-  display: inline-block;
-}
-
-main article#article2 section#art2_sec2 ul#art2_browse li.num{
-  /* outline: 1px solid purple; */
-  margin-right: 100px;
-  position: relative;
-  top: 100px;
-  left: 90px;
-}
-
-/* main article#article2 section#art2_sec2 ul#art2_browse li#num{
-
-} */
-
-
-main article#article2 section#art2_sec2 ul#art2_browse li.text{
-  /* outline: 1px solid black; */
-  width: 120px;
-  margin-right: 70px;
-  position: relative;
-  top: 200px;
-  right: 700px;
+  margin-bottom: 110px;
+  padding-top: 30px;
+  padding-bottom: 50px;
 }
 
 main article#article2 section#art2_sec2 > h2{
   color: white;
-  margin: 40px auto;
+  margin-bottom: 30px;
 }
 
-main article#article2 section#art2_sec2 ul > li h2{
+main article#article2 section#art2_sec2 > div.container{
+  width: 100%;
+  margin: auto;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+main article#article2 section#art2_sec2 div > div ul#art2_browse{
+  display: flex;
+  width: 610px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+main article#article2 section#art2_sec2 div > div ul#art2_browse > li{
+  display: inline-block;
+  margin: 70px 5px 30px;
+}
+
+main article#article2 section#art2_sec2 div > div ul#art2_browse li.text{
+  width: 140px;
+}
+
+main article#article2 section#art2_sec2 div > div > ul > li h2{
   color: rgb(60, 60, 60);
+  margin-bottom: 30px;
 }
 
 main article#article2 section#art2_sec2 h3{
@@ -395,129 +564,300 @@ main article#article2 section#art2_sec2 h3{
 }
 
 main article#article2 section#art2_sec2 h4{
-  /* outline: 1px solid blue; */
+  display: inline-block;
   color: white;
-  position: relative;
-  top: 20px;
-  left: -350px;
+  text-align: left;
+  margin-top: 30px;
 }
 
 main article#article2 section#art2_sec2 h5{
-  /* outline: 1px solid yellow; */
   color: white;
+  letter-spacing: 2px;
 }
 
-main article#article2 section#art2_sec2 iframe{
-  /* outline: 1px solid white; */
-  width: 510px;
-  height: 315px;
-  position: relative;
-  bottom: 100px;
-  right: -420px;
+main article#article2 section#art2_sec2 div.right{
+  width: 590px;
+  display: flex;
+  justify-content: space-between;
+}
+
+main article#article2 section#art2_sec2 div iframe{
   background-color: #fff;
 }
 
-main article#article2 section#art2_sec2 div{
-  /* outline: 1px solid white; */
-  width: 54px;
+main article#article2 section#art2_sec2 div > div > div{
+  padding-top: 80px;
+  width: 65px;
   display: inline-block;
   position: relative;
-  left: 490px;
-  bottom: 160px;
 }
 
 main article#article2 section#art2_sec2 div a.art2_button{
   display: inline-block;
-  width: 54px;
-  height: 54px;
-  background-color: rgb(60, 60, 60);
-  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 0%);
+  background-color: rgba(60, 60, 60, 100%);
+  border: 5px solid rgba(255, 255, 255, 100%);
+  border-radius: 50px;
   margin: 6px auto;
+  transition: transform 1s, width 1s, color .2s ease-out, background-color 1s, border-color 1s;
+}
+
+
+main article#article2 section#art2_sec2 div a.art2_button:hover{
+  width: 200px;
+  color: rgba(255, 255, 255, 100%);
+  background-color: rgba(255, 68, 0, 100%);
+  transform: translateX(-146px);
+  border-color: rgba(255, 255, 255, 100%);
+  cursor: pointer;
 }
 
 main article#article2 section#art2_sec2 a#sec2{
-  border-color: white;
-  color: white;
-  position: relative;
-  bottom: 20px;
-  left: -280px;
+  border-color: rgba(255, 255, 255, 100%);
+  background-color: rgba(255, 255, 255, 0%);
+  color: rgba(255, 255, 255, 100%);
+  transition: background-color .3s, color .3s;
+}
+
+main article#article2 section#art2_sec2 a#sec2:hover{
+  background-color: rgba(255, 255, 255, 100%);
+  color: rgba(255, 68, 0, 100%);
 }
 
 main article#article2 section#art2_sec3 > p{
   width: 800px;
   margin: 30px auto;
+  margin-bottom: 50px;
 }
 
-main article#article2 section ul#art2_quality li{
+main article#article2 section ul.art2_quality{
+  margin-top: 10px;
   display: inline-block;
 }
 
-main article#article2 section ul#art2_quality li a{
-  /* outline: 1px solid black; */
+
+main article#article2 section ul.art2_quality li{
   display: inline-block;
-  width: 130px;
-  height: 135px;
-  margin: auto 10px;
-  background-color: grey;
+  width: 160px;
+  margin-right: 10px;
+  vertical-align: top;
+}
+
+/* main article#article2 section > ul > li:first-child{
+  margin-left: 5px;
+} */
+
+main article#article2 section > ul > li:last-child{
+  margin-right: 5px;
+}
+
+main article#article2 section ul.art2_quality li img{
+  display: inline-block;
+  width: 160px;
+  height: 160px;
+  border: 3px solid #ff4400;
+  box-shadow: 5px 10px 10px 0 rgba(0, 0, 0, .5);
+  transition: transform 1s, box-shadow 1s, border-color 1s;
+}
+
+main article#article2 section ul.art2_quality li p{
+  display: inline-block;
+  width: 160px;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0%);
+  border: none;
+  background-color: rgba(255, 68, 0, 0%);
+  transform: translateY(20%);
+  transition: all 1s;
+  position: relative;
+  z-index: -1;
+}
+
+main article#article2 section ul.art2_quality li img:hover{
+  transform: translateY(-30px);
+  background-color: rgba(255, 255, 255, 0%);
+  border: transparent;
+  position: relative;
+  box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 50%);
+  z-index: 1;
+  cursor: pointer;
+}
+
+main article#article2 section ul.art2_quality li img.-on{
+  transform: translateY(-30px);
+  background-color: rgba(255, 255, 255, 0%);
+  border: transparent;
+  position: relative;
+  box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 50%);
+  z-index: 1;
+}
+
+main article#article2 section ul.art2_quality li img:hover + p{
+  color: rgba(255, 255, 255, 100%);
+  background-color: rgba(255, 68, 0, 90%);
+  box-shadow: 5px 10px 10px 0 rgba(0, 0, 0, .5);
+  transform: translateY(-30px);
+  position: relative;
+  z-index: 1;
+}
+
+main article#article2 section ul.art2_quality li p.-on{
+  color: rgba(255, 255, 255, 100%);
+  background-color: rgba(255, 68, 0, 90%);
+  box-shadow: 5px 10px 10px 0 rgba(0, 0, 0, .5);
+  transform: translateY(-30px);
+  position: relative;
+  z-index: 1;
+}
+
+main article#article2 section ul.art2_quality li p:hover{
+  color: rgba(255, 255, 255, 100%);
+  background-color: rgba(255, 68, 0, 90%);
+  box-shadow: 5px 10px 10px 0 rgba(0, 0, 0, .5);
+  transform: translateY(0px);
+  position: relative;
+  z-index: 1;
 }
 
 main article#article3{
-  /* outline: 1px solid green; */
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+}
+
+main article#article3 section#left{
+  text-align: left;
+}
+
+main article#article3 section#right{
   position: relative;
   overflow: hidden;
-  height: 700px;
+  padding-top: 15px;
 }
 
-main article#article3 h1{
-  margin-left: 200px;
-}
-
-main article#article3 > p{
-  /* outline: 1px solid red; */
+main article#article3 section > p{
   width: 350px;
   text-align: left;
-  margin-left: 200px;
+  margin-left: 185px;
   margin-top: 30px;
+  margin-bottom: 80px;
 }
 
-main article#article3 ul#art3_link{
-  /* outline: 1px solid yellow; */
-  height: 600px;
+main article#article3 section ul#art3_link{
   white-space:nowrap;
-  position: absolute;
-  bottom: 90px;
-  left: 800px;
 }
 
-main article#article3 ul#art3_link li{
-  display: inline-block;
-}
-
-main article#article3 ul#art3_link li a{
-  border: 1px solid #ff4400;
-  display: inline-block;
-  width: 460px;
-  height: 600px;
-  background-color: grey;
-}
-
-main article#article3 a{
+main article#article3 section a{
   display: inline-block;
   font-size: 16px;
   text-align: center;
   text-decoration: none;
 }
 
-main article#article3 a#art3_text{
-  border: 1px solid black;
-  width: 120px;
-  height: 50px;
+main article#article3 section a#art3_text{
+  border: 3px solid black;
+  width: 160px;
+  height: 60px;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
   line-height: 50px;
-  margin-left: 310px;
-  margin-top: 80px;
+  margin-left: 185px;
+  transition: color .3s, border .3s, box-shadow .3s;
 }
 
-main article#article3 a.art3_button{
+main article#article3 section a#art3_text:hover{
+  border: 3px solid rgb( 255, 68, 0);
+  color: rgb(255, 68, 0);
+  box-shadow: 5px 10px 10px 0 rgba(0, 0, 0, .3);
+}
+
+main article#article3 section ul#art3_link{
+  position: relative;
+  left: 0;
+}
+
+main article#article3 section ul#art3_link li{
+  display: inline-block;
+  position: relative;
+}
+
+main article#article3 section ul#art3_link li a{
+  border: 10px solid rgb(255, 68, 0);
+  display: inline-block;
+  width: 460px;
+  height: 600px;
+  box-shadow: 5px 10px 10px 0 rgba(0, 0, 0, .5);
+  background-repeat: no-repeat;
+  background-size: 200%;
+  transition: all 1s;
+}
+
+main article#article3 section ul#art3_link li:first-child a.img{
+  background-image: url("../img/USE/18-home_art3_img1.jpg");
+  background-position-x: -200px;
+  /* border: 10px solid rgb(0, 0, 0); */
+  /* transform: translateY(-5px); */
+  /* background-size: 210%; */
+}
+
+main article#article3 section ul#art3_link li:nth-child(2) a.img{
+  background-image: url("../img/USE/19-home_art3_img2.jpg");
+  background-position-x: -200px;
+}
+
+main article#article3 section ul#art3_link li:nth-child(3) a.img{
+  background-image: url("../img/USE/20-home_art3_img3.jpg");
+  background-size: 250%;
+  background-position-x: -350px;
+}
+
+main article#article3 section ul#art3_link li p.text{
+  display: inline-block;
+  min-height: 270px;
+  padding: 60px 50px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-align: left;
+  line-height: 30px;
+  /* background-color: rgba(255, 68, 0, .3); */
+  color: rgb(255, 255, 255, .5);
+  width: 100%;
+  word-break: break-word !important;
+  white-space: normal;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: all 1s;
+}
+
+main article#article3 section ul#art3_link li:hover a.img{
+  border: 10px solid rgb(0, 0, 0);
+  transform: translateY(-5px);
+  cursor: pointer;
+  background-size: 210%;
+}
+
+main article#article3 section ul#art3_link li:nth-child(3):hover a.img{
+  background-size: 260%;
+}
+
+main article#article3 section ul#art3_link li:hover p{
+  text-decoration: underline;
+  background-color: rgba(0, 0, 0, .5);
+  color: rgb(255, 255, 255, 100%);
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+main article#article3 section a.art3_button{
   width: 70px;
   height: 70px;
   background-color: #ff4400;
@@ -526,61 +866,80 @@ main article#article3 a.art3_button{
   line-height: 70px;
   border-radius: 50px;
   position: relative;
+  z-index: 2;
+  top: 100px;
+  transition: all .3s;
 }
 
-main article#article3 a#art3_button1{
-  left: 330px;
-  top: 110px;
+main article#article3 section a.art3_button:hover{
+  background-color: black;
+  line-height: 64px;
+  border: 3px solid white;
 }
 
-main article#article3 a#art3_button2{
-  right: -1300px;
-  top: 110px;
+main article#article3 section a#art3_button1{
+  left: 270px;
+}
+
+main article#article3 section a#art3_button2{
+  right: -730px;
 }
 
 main article#article4{
-  margin-top: 115px;
-  margin-bottom: 0;
   background-image: url("../img/USE/03-article4_bcg@2x.png");
   background-repeat: no-repeat;
   background-size: cover;
+  padding-bottom: 100px;
 }
 
-main article#article4 section#art4_sec2, main article#article4 section#art4_sec3{
-  display: inline-block;
-  margin: 130px 0 80px 438px;
-  vertical-align: top;
+main article#article4 h2{
+  text-decoration: underline;
 }
 
-main article#article4 section#art4_sec2 p, main article#article4 section#art4_sec3 p{
-  width: 300px;
+main article#article4 > div{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+main article#article4 div section#art4_sec2, main article#article4 div section#art4_sec3{
   margin-top: 30px;
+  margin-bottom: 50px;
 }
 
+main article#article4 div section#art4_sec2 p, main article#article4 div section#art4_sec3 p{
+  width: 300px;
+  margin-top: 10px;
+}
 
 main article#article4 section#art4_sec4  ul#art4_link{
-  margin: 80px auto;
+  background-image: url(../img/USE/21-home_art4_img1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -100px;
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 main article#article4 section#art4_sec4  ul#art4_link > li{
   display: inline-block;
-  width: 380px;
-  height: 547px;
-  vertical-align: top;
+  width: 20%;
 }
 
 main article#article4 section#art4_sec4  ul#art4_link li ul{
+  padding-top: 30px;
   position: relative;
+  transition: transform .5s;
 }
 
 main article#article4 section#art4_sec4  ul#art4_link li ul li.intro{
   font-size: 18px;
+  letter-spacing: 1px;
   line-height: 30px;
   color: white;
-  width: 250px;
-  position: absolute;
-  top: 100px;
-  left: 65px;
+  height: 300px;
+  padding: 5% 10%;
 }
 
 main article#article4 section#art4_sec4  ul#art4_link li ul li.arrow a::before{
@@ -588,34 +947,47 @@ main article#article4 section#art4_sec4  ul#art4_link li ul li.arrow a::before{
   display: inline-block;
   width: 70px;
   height: 70px;
-  background-color: rgba(255, 255, 255, .2);
+  background-color: rgba(255, 255, 255, .05);
   border-radius: 50px;
   position: absolute;
-  left: 40%;
-  bottom: 8%;
+  left: 35%;
+  bottom: 3%;
+  transition: background-color .5s, box-shadow .5s;
 }
 
 main article#article4 section#art4_sec4  ul#art4_link li ul li.arrow a{
-  width: 380px;
-  height: 547px;
+  width: 100%;
+  height: 100%;
   font-size: 30px;
-  color: #ff4400;
+  color: rgb(255, 68, 0);
   text-decoration: none;
-  padding-top: 450px;
+  padding-top: 300px;
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(60, 60, 60, .5);
+  background-color: rgba(0, 0, 0, .5);
+  transition: background-color .5s, color .5s;
 }
 
+main article#article4 section#art4_sec4  ul#art4_link li:hover > ul{
+  transform: translateY(-10px);
+}
 
+main article#article4 section#art4_sec4  ul#art4_link li:hover > ul li a{
+  background-color: rgba(255, 255, 255, 0%);
+  color: rgb( 255, 255, 255);
+}
+
+main article#article4 section#art4_sec4  ul#art4_link li:hover > ul li a::before{
+  background-color: rgba(255, 255, 255, .2);
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, .5);
+}
 
 main article#article4 section#art4_sec4  ul#art4_link li ul li.title{
   display: inline-block;
   font-size: 28px;
   font-weight: 700;
   color: #ff4400;
-  padding-top: 50px;
 }
 
 main article#article4 section#art4_sec4  ul#art4_link li ul li{
@@ -624,8 +996,9 @@ main article#article4 section#art4_sec4  ul#art4_link li ul li{
 }
 
 main article#article5{
-  margin-top: 0px;
-  background-color: black;
+  margin-top: 0;
+  background: linear-gradient( 180deg, rgb(37, 37, 37) 10%, rgb(0, 0, 0) 100%);
+  padding-bottom: 100px;
 }
 
 main article#article5 div{
@@ -638,24 +1011,24 @@ main article#article5 div p{
   background-color: rgb(58, 58, 58);
   display: inline-block;
   color: white;
+  letter-spacing: 1px;
   padding: 20px 100px;
   padding-right: 240px;
   width: 800px;
-  margin-left: 180px;
+  margin-left: 200px;
 }
 
 main article#article5 div h2{
   display: inline-block;
   color: white;
   font-weight: 600;
-  margin-top: 100px;
   position: absolute;
-  top: -80px;
+  top: 20px;
 }
 
 main article#article5 a{
   display: inline-block;
-  background-color: #ff4400;
+  background-color: rgb(255, 68, 0);
   width: 200px;
   height: 60px;
   font-size: 23px;
@@ -666,8 +1039,1306 @@ main article#article5 a{
   position: absolute;
   right: 50px;
   top: 20px;
+  transition: background-color .3s, box-shadow .3s;
+}
+
+main article#article5 a:hover{
+  background-color: rgb(0, 0, 0);
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, .5);
 }
 
 footer section#sec3 button.top{
-  top: -130px;
+  top: -30px;
+  right: 170px;
+}
+
+[data-aos="bcg_color"] {
+  background: transparent;
+  transition-property: background;
+}
+
+[data-aos="bcg_color"].aos-animate {
+  background: rgba(0, 0, 0, .7);
+}
+
+/* -----------RWD */
+
+/* 320 - 575 */
+@media screen and (max-width: 575px){
+
+  header{
+    padding-top: 140px;
+    height: 568px;
+    min-height: 568px;
+    min-width: 320px;
+  }
+
+  header div > div span.space{
+    font-size: 28px;
+    color: transparent;
+  }
+
+  header div div.animation_text{
+    width: 100%;
+  }
+
+  .animation_title .letter {
+    /* line-height: 1rem; */
+    display: inline-block;
+    font-size: 28px;
+  }
+
+  header div ul.animation_text li.animation_title{
+    max-width: 300px;
+    font-size: 40px;
+  }
+
+  header form.banner_track{
+    text-align: center;
+    margin-top: 80px;
+    width: 80%;
+  }
+
+  header form label.banner_track, header form input#banner_track{
+    /* border-radius: 0; */
+    font-size: 10px;
+  }
+
+  header form label.banner_track{
+    /* bottom: -100%; */
+    width:  30%;
+    padding: 20px;
+  }
+
+  header form input#banner_track{
+    padding: 20px;
+  }
+
+  header div.banner_news em p.banner_news_title{
+    width: 280px;
+    margin-top: 100px;
+    font-size: 16px;
+  }
+
+  header div.banner_news em a.banner_news_button{
+    font-size: 14px;
+  }
+  
+  header div.banner_news span.banner_news_split{
+    display: block;
+    width: 90%;
+    height: 1px;
+    transform: translate(0px, 0px)  rotate(0deg);
+    margin: auto;
+  }
+
+  main{
+    min-width: 320px;
+  }
+
+  main article{
+    margin-top: 40px;
+  }
+
+  main article#article1{
+    padding-bottom: 80px;
+  }
+
+  main article#article1 section > div{
+    padding-right: 0%;
+  }
+
+  main article#article1 section > div h1.topic{
+    width:100%;
+    padding-left: 10%;
+  }
+
+  main article#article1 section p#art1_intro{
+    width: 80%;
+    padding: 30px;
+    padding: 15px 0;
+  }
+
+  main article#article1 section ul#art1_link {
+    padding-top: 0;
+  }
+
+  main article#article1 section ul#art1_link > li > div a{
+    margin-top: 30px;
+  }
+
+  main article#article1 section ul#art1_link > li > div a.art_link_text{
+    width: 220px;
+    padding: 20px 15px;
+    font-size: 16px;
+    right: 0;
+    top: 160px;
+  }
+
+  main article#article1 section ul#art1_link > li > div a.art_link_text::before{
+    font-size: 20px;
+  }
+
+  main article#article1 section ul#art1_link > li > div a#art_link_text_lb,   main article#article1 section ul#art1_link > li > div a#art_link_text_rb,   main article#article1 section ul#art1_link > li > div a#art_link_text_mid{
+    right: 0px;
+    top: 160px;
+  }
+
+  main article#article1 section ul#art1_link li > div > div a.art1_link_img,main article#article1 section ul#art1_link li > div > div a.cover{
+    border: 5px solid #ff4400;
+    width: 220px;
+    height: 220px;
+  }
+
+  main article#article1 section ul#art1_link > li > div{
+    margin: 0 30px;
+  }
+
+  main article#article2 section#art2_sec1{
+    margin-bottom: 60px;
+  }
+
+  main article#article2 section div h1.topic::after{
+    width: 10vw;
+    min-width: 0;
+  }
+
+  main article#article2 ul.art2_imgshow{
+    margin: 20px auto;
+  }
+
+  main article#article2 ul.art2_imgshow > li.img{
+    width: 100%;
+    height: 300px;
+  }
+
+  main article#article2 ul.art2_imgshow > li span#span1{
+    border: 15px solid #ff4400;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+    left: 5px;
+  }
+
+  main article#article2 ul.art2_imgshow > li span#span2{
+    border: 15px solid #ff4400;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+    right: 5px;
+  }
+
+  main article#article2 ul.art2_imgshow > li h3.art2_imgshow_intro{
+    font-size: 18px;
+    max-width: 270px;
+  }
+
+  main article#article2 ul.art2_imgshow > li h3.art2_imgshow_intro::before{
+    width: 13px;
+    height: 3px;
+    bottom: 18px;
+    left: 4.2px;
+  }
+
+  main article#article2 ul.art2_imgshow > li p{
+    width: 70%;
+    letter-spacing: 0;
+  }
+
+  main article#article2 section#art2_sec2 > h2{
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  main article#article2 section#art2_sec2 h4{
+    margin-top: 0px;
+    font-size: 16px;
+    width: 250px;
+    text-align: center;
+  }
+
+  main article#article2 section#art2_sec2 > div.container{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main article#article2 section#art2_sec2 div > div ul#art2_browse{
+    width: 280px;
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  main article#article2 section#art2_sec2 div > div ul#art2_browse > li{
+    margin: 10px 5px 15px;
+  }
+
+  main article#article2 section#art2_sec2 div > div ul#art2_browse li.text{
+    width: 120px;
+  }
+
+  main article#article2 section#art2_sec2 div > div > ul > li h2{
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+  
+  main article#article2 section#art2_sec2 h5{
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+  main article#article2 section#art2_sec2 div.right{
+    width: 260px;
+    flex-wrap: wrap;
+  }
+
+  main article#article2 section#art2_sec2 div.right iframe{
+    width: 100%;
+    height: 180px;
+    margin-top: 30px;
+  }
+
+  main article#article2 section#art2_sec2 div > div > div{
+    padding-top: 30px;
+    width: 100%;
+  }
+
+  main article#article2 section#art2_sec2 div a.art2_button{
+    color: rgba(255, 255, 255, 100%);
+    width: 200px;
+  }
+
+  main article#article2 section#art2_sec2 div a.art2_button:hover{
+    transform: none;
+  }
+
+  main article#article2 section#art2_sec3 > h2{
+    font-size: 24px;
+  }
+
+  main article#article2 section#art2_sec3 > p{
+    width: 80%;
+    margin: 15px auto 40px;
+  }
+
+  main article#article2 section ul.art2_quality{
+    width: 200px;
+    margin: 0;
+  }
+
+  main article#article2 section ul.art2_quality li{
+    width: 200px;
+    height: 250px;
+    margin: 0;
+  }
+
+  main article#article2 section ul.art2_quality li img{
+    width: 200px;
+    height: 200px;
+  }
+  
+  main article#article2 section ul.art2_quality li p{
+    width: 200px;
+  }
+  
+  main article#article3{
+    flex-direction: column;
+  }
+
+  main article#article3 section > div > h1.topic{
+    width: 100%;
+    padding-left: 21.5%;
+  }
+
+  main article#article3 section > div > h1.topic::before{
+    width: 15vw;
+    min-width: 15%;
+  }
+
+  main article#article3 section > p{
+    width: 300px;
+    margin: 10px auto;
+  }
+
+  main article#article3 section a#art3_text{
+    margin-left: 22%;
+  }
+
+  main article#article3 section ul#art3_link li a{
+    border-width: 5px;
+    width: 295px;
+    height: 384px;
+    border-color: black;
+  }
+
+  /* main article#article3 section ul#art3_link li:first-child a.img{
+    border: 5px solid black;
+    background-position-x: -100px;
+  } */
+
+
+  main article#article3 section ul#art3_link li:nth-child(2) a.img{
+    background-position-x: -120px;
+  }
+
+  main article#article3 section ul#art3_link li:nth-child(3) a.img{
+    background-position-x: -300px;
+  }
+
+  main article#article3 section ul#art3_link li:hover a.img{
+    border-width: 5px;
+  }
+
+  main article#article3 section ul#art3_link li p.text{
+  text-decoration: underline;
+  background-color: rgba(0, 0, 0, .5);
+  color: rgb(255, 255, 255, 100%);
+  /* transform: translateY(-5px); */
+  z-index: 1;
+  }
+
+  main article#article3 section a#art3_button1{
+    position: absolute;
+    top: 450px;
+    left: 15px;
+    display: none;
+  }
+
+  main article#article3 section a#art3_button2{
+    position: absolute;
+    right: 15px;
+    top: 450px;
+    display: none;
+  }
+
+  main article#article3 section ul#art3_link li p.text{
+    padding: 20px 20px;
+    font-size: 18px;
+  }
+
+  main article#article4 section div > h1.topic::after{
+      width: 20vw;
+      min-width: 10px;
+  }
+    
+  main article#article4 h2{
+      font-size: 18px;
+  }
+
+  main article#article4 > div{
+      display: block;
+  }
+  
+  main article#article4 div section#art4_sec2 p, main article#article4 div section#art4_sec3 p{
+      display: block;
+      width: 100%;
+      padding: 0 10px;
+  }
+    
+  main article#article4 section#art4_sec4  ul#art4_link{
+      background-position-y: 0px;
+  }
+
+  main article#article4 section#art4_sec4  ul#art4_link > li{
+      width: 100%;
+  }
+  
+  main article#article4 section#art4_sec4  ul#art4_link > li:last-child{
+      width: 100%;
+  }
+  
+  main article#article4 section#art4_sec4  ul#art4_link > li:nth-child(3):hover > ul li a, main article#article4 section#art4_sec4  ul#art4_link > li:nth-child(4):hover > ul li a, main article#article4 section#art4_sec4  ul#art4_link > li:last-child:hover > ul li a{
+      color: black;
+  }
+
+  main article#article4 section#art4_sec4  ul#art4_link li:nth-child(3):hover > ul, main article#article4 section#art4_sec4  ul#art4_link li:nth-child(4):hover > ul, main article#article4 section#art4_sec4  ul#art4_link li:last-child:hover > ul{
+      background-color: rgba(255, 255, 255, .4);
+  }
+    
+  main article#article4 section#art4_sec4 ul#art4_link li:nth-child(3):hover ul li.intro, main article#article4 section#art4_sec4 ul#art4_link li:nth-child(4):hover ul li.intro, main article#article4 section#art4_sec4 ul#art4_link li:last-child:hover ul li.intro{
+      color: black;
+      font-weight: 700;
+  }
+  
+  main article#article4 section#art4_sec4  ul#art4_link li ul li.intro{
+      width: 100%;
+      margin: auto;
+      height: 250px;
+  }
+
+  main article#article4 section#art4_sec4 ul#art4_link li ul li.arrow a{
+      padding-top: 250px;
+  }
+  
+  main article#article4 section#art4_sec4 ul#art4_link li ul li.arrow a::before{
+      left: 41%;
+  }
+
+  main article#article5 div{
+      width: 300px;
+  }
+
+  main article#article5 div h2{
+      top: -15px;
+      left: 20px;
+      font-size: 23px;
+  }
+
+  main article#article5 div p{
+      text-align: center;
+      width: 100%;
+      padding: 45px 5% 70px;
+      margin-left: 0;
+  }
+
+  main article#article5 a{
+      right: 50px;
+      top: 130px;
+  }
+
+  
+}
+
+/* 576 - 767 */
+@media screen and (min-width: 576px) and (max-width: 767px){
+  header{
+    padding-top: 80px;
+    height: 610px;
+    min-height: 610px;
+  }
+
+  header div > div span.space{
+    font-size: 40px;
+    color: transparent;
+  }
+
+  .animation_title .letter {
+    /* line-height: 1rem; */
+    display: inline-block;
+    font-size: 40px;
+  }
+
+
+  header div ul.animation_text li.animation_title{
+    max-width: 600px;
+    font-size: 80px;
+  }
+
+  header form.banner_track{
+    margin-top: 80px;
+  }
+
+  header div.banner_news em p.banner_news_title{
+    width: 320px;
+    margin-top: 160px;
+    font-size: 18px;
+  }
+
+  header div.banner_news em a.banner_news_button{
+    font-size: 16px;
+  }
+
+  main article{
+    margin-top: 60px;
+  }
+
+  main article#article1{
+    padding-bottom: 80px;
+  }
+
+  main article#article1 section > div{
+    padding-right: 0%;
+  }
+
+  main article#article1 section > div h1.topic{
+    width:100%;
+    padding-left: 10%;
+  }
+
+  main article#article1 section p#art1_intro{
+    width: 80%;
+    padding: 30px;
+  }
+
+  main article#article1 section ul#art1_link > li > div a.art_link_text{
+    width: 200px;
+    padding: 20px;
+    font-size: 16px;
+    right: 0;
+    top: -10px;
+  }
+
+  main article#article1 section ul#art1_link > li > div a#art_link_text_lb{
+    right: 0px;
+    top: 160px;
+  }
+  
+  main article#article1 section ul#art1_link > li > div a#art_link_text_rb{
+    right: 0px;
+    top: 160px;
+  }
+  
+  main article#article1 section ul#art1_link > li > div a#art_link_text_mid{
+    right: 0px;
+    top: 160px;
+  }
+
+  main article#article1 section ul#art1_link li > div > div a.art1_link_img,main article#article1 section ul#art1_link li > div > div a.cover{
+    border: 5px solid #ff4400;
+    width: 200px;
+    height: 200px;
+  }
+
+  main article#article1 section ul#art1_link > li > div{
+    margin: 10px 30px;
+  }
+
+  main article#article2 section div h1.topic::after{
+    width: 15vw;
+    min-width: 0;
+  }
+
+  main article#article2 ul.art2_imgshow{
+    margin: 20px auto;
+  }
+
+
+  main article#article2 ul.art2_imgshow > li.img{
+    width: 100%;
+    height: 300px;
+  }
+
+  main article#article2 ul.art2_imgshow > li span#span1{
+    left:40px;
+  }
+
+  main article#article2 ul.art2_imgshow > li span#span2{
+    right: 40px;
+  }
+
+  main article#article2 ul.art2_imgshow > li h3.art2_imgshow_intro::before{
+    bottom: 30px;
+    left: 4.2px;
+  }
+
+  main article#article2 ul.art2_imgshow > li h3.art2_imgshow_intro{
+    max-width: 400px;
+  }
+
+  main article#article2 ul.art2_imgshow > li p{
+    width: 300px;
+  }
+
+  main article#article2 section#art2_sec2 > h2{
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+  
+  main article#article2 section#art2_sec2 h4{
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+
+  main article#article2 section#art2_sec2 > div.container{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main article#article2 section#art2_sec2 div > div ul#art2_browse{
+    justify-content: center;
+  }
+
+  main article#article2 section#art2_sec2 div > div ul#art2_browse > li{
+    margin: 10px 5px 30px;
+  }
+
+  main article#article2 section#art2_sec2 div > div ul#art2_browse li.text{
+    width: 120px;
+  }
+
+  main article#article2 section#art2_sec2 div > div > ul > li h2{
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  main article#article2 section#art2_sec2 h5{
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+  main article#article2 section#art2_sec2 div.right{
+    width: 500px;
+  }
+
+  main article#article2 section#art2_sec2 div.right iframe{
+    width: 420px;
+    height: 260px;
+  }
+
+  main article#article2 section#art2_sec2 div > div > div{
+    padding-top: 40px;
+  }
+
+  main article#article2 section#art2_sec3 > p{
+    width: 500px;
+    margin: 15px auto;
+  }
+  main article#article2 section ul.art2_quality{
+    width: 300px;
+  }
+
+  main article#article2 section ul.art2_quality li{
+    width: 300px;
+    height: 360px;
+    margin: 0;
+  }
+
+  main article#article2 section ul.art2_quality li img{
+    width: 300px;
+    height: 300px;
+  }
+  
+  main article#article2 section ul.art2_quality li p{
+    width: 300px;
+  }
+
+  main article#article3{
+    flex-direction: column;
+  }
+
+  main article#article3 section > div > h1.topic{
+    width: 100%;
+    padding-left: 33%;
+  }
+
+  main article#article3 section > div > h1.topic::before{
+    width: 20vw;
+    min-width: 8%;
+  }
+
+  main article#article3 section > p{
+    width: 400px;
+    text-align: center;
+    margin: 10px auto;
+  }
+
+  main article#article3 section a#art3_text{
+    margin-left: 41%;
+  }
+
+  main article#article3 section ul#art3_link li a{
+    border-width: 5px;
+    width: 295px;
+    height: 384px;
+  }
+
+  main article#article3 section ul#art3_link li:first-child a.img{
+    background-position-x: -100px;
+  }
+
+  main article#article3 section ul#art3_link li:nth-child(2) a.img{
+    background-position-x: -120px;
+  }
+
+  main article#article3 section ul#art3_link li:nth-child(3) a.img{
+    background-position-x: -300px;
+  }
+
+  main article#article3 section ul#art3_link li:hover a.img{
+    border-width: 5px;
+  }
+
+  main article#article3 section a#art3_button1{
+    top: 370px;
+    left: -300px;
+  }
+
+  main article#article3 section a#art3_button2{
+    right: -5px;
+    top: 370px;
+  }
+
+  main article#article3 section ul#art3_link li p.text{
+    padding: 20px 20px;
+    font-size: 18px;
+  }
+
+  main article#article4 section div > h1.topic::after{
+    min-width: 120px;
+  }
+  
+  main article#article4 h2{
+    font-size: 24px;
+  }
+
+  main article#article4 div section#art4_sec2 p, main article#article4 div section#art4_sec3 p{
+    width: 250px;
+  }
+  
+  main article#article4 section#art4_sec4  ul#art4_link{
+    background-position-y: 0px;
+  }
+
+  main article#article4 section#art4_sec4  ul#art4_link > li{
+    width: 50%;
+  }
+
+  main article#article4 section#art4_sec4  ul#art4_link > li:last-child{
+    width: 100%;
+  }
+
+  main article#article4 section#art4_sec4  ul#art4_link > li:nth-child(3):hover > ul li a, main article#article4 section#art4_sec4  ul#art4_link > li:nth-child(4):hover > ul li a, main article#article4 section#art4_sec4  ul#art4_link > li:last-child:hover > ul li a{
+    color: black;
+  }
+
+
+  main article#article4 section#art4_sec4  ul#art4_link li:nth-child(3):hover > ul, main article#article4 section#art4_sec4  ul#art4_link li:nth-child(4):hover > ul, main article#article4 section#art4_sec4  ul#art4_link li:last-child:hover > ul{
+    background-color: rgba(255, 255, 255, .4);
+  }
+
+  
+  main article#article4 section#art4_sec4 ul#art4_link li:nth-child(3):hover ul li.intro, main article#article4 section#art4_sec4 ul#art4_link li:nth-child(4):hover ul li.intro, main article#article4 section#art4_sec4 ul#art4_link li:last-child:hover ul li.intro{
+    color: black;
+    font-weight: 700;
+  }
+
+  main article#article4 section#art4_sec4  ul#art4_link li ul li.intro{
+    width: 100%;
+    margin: auto;
+  }
+
+  main article#article4 section#art4_sec4 ul#art4_link li ul li.arrow a::before{
+    left: 38%;
+  }
+
+  main article#article4 section#art4_sec4 ul#art4_link li:nth-child(3) ul li.arrow a::before, main article#article4 section#art4_sec4 ul#art4_link li:nth-child(4) ul li.arrow a::before{
+    left: 38%;
+  }
+
+  main article#article4 section#art4_sec4 ul#art4_link li:last-child ul li.arrow a::before{
+    left: 44%;
+  }
+
+  main article#article5 div{
+    width: 550px;
+  }
+  
+  main article#article5 div h2{
+    top: -30px;
+    left: 100px;
+  }
+  
+  main article#article5 div p{
+    width: 80%;
+    padding: 40px 6% 70px;
+    margin-left: 55px;
+  }
+  
+  main article#article5 a{
+    right: 140px;
+    top: 100px;
+  }
+
+}
+
+/* 768 - 991 */
+@media screen and (min-width: 768px) and (max-width: 991px){
+
+  header{
+    padding-top: 180px;
+    height: 770px;
+    min-height: 770px;
+  }
+
+  header div > div span.space{
+    font-size: 60px;
+    color: transparent;
+  }
+
+  .animation_title .letter {
+    /* line-height: 1rem; */
+    display: inline-block;
+    font-size: 60px;
+  }
+
+  header div ul.animation_text li.animation_title{
+    max-width: 600px;
+  }
+
+  header form.banner_track{
+    margin-top: 100px;
+  }
+
+  header div.banner_news em p.banner_news_title{
+    width: 500px;
+    margin-top: 140px;
+    font-size: 24px;
+  }
+
+  main article{
+    margin-top: 80px;
+  }
+
+  main article#article1{
+    padding-bottom: 80px;
+  }
+
+  main article#article1 section > div{
+    padding-right: 10%;
+  }
+
+  main article#article1 section > div h1.topic{
+    width:100%;
+    padding-left: 10%;
+  }
+
+  main article#article1 section p#art1_intro{
+    width: 90%;
+    padding: 30px;
+  }
+
+  main article#article1 section ul#art1_link > li > div a.art_link_text{
+    padding: 20px;
+    font-size: 16px;
+    right: -60px;
+    top: 30px;
+  }
+
+  main article#article1 section ul#art1_link > li > div a#art_link_text_lb{
+    right: -40px;
+    top: 180px;
+  }
+  
+  main article#article1 section ul#art1_link > li > div a#art_link_text_rb{
+    right: -60px;
+    top: 180px;
+  }
+  
+  main article#article1 section ul#art1_link > li > div a#art_link_text_mid{
+    right: -60px;
+    top: 180px;
+  }
+
+  main article#article1 section ul#art1_link li > div > div a.art1_link_img,main article#article1 section ul#art1_link li > div > div a.cover{
+    border: 5px solid #ff4400;
+    width: 250px;
+    height: 250px;
+  }
+
+  main article#article1 section ul#art1_link > li > div{
+    margin: 0 50px;
+  }
+
+  main article#article2 section div h1.topic::after{
+    width: 20vw;
+    min-width: 0;
+  }
+
+  main article#article2 ul.art2_imgshow{
+    margin: 20px auto;
+  }
+
+  main article#article2 ul.art2_imgshow > li.img{
+    width: 537px;
+    height: 249px;
+  }
+
+  main article#article2 ul.art2_imgshow > li span#span1{
+    left:40px;
+  }
+
+  main article#article2 ul.art2_imgshow > li span#span2{
+    right: 40px;
+  }
+
+  main article#article2 section#art2_sec2 h4{
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+
+  main article#article2 section#art2_sec2 > div.container{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main article#article2 section#art2_sec2 div > div ul#art2_browse {
+    width: 800px;
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+
+  main article#article2 section#art2_sec2 div > div ul#art2_browse > li{
+    margin: 10px 20px 30px;
+  }
+
+  main article#article2 section#art2_sec2 div > div > ul > li h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  
+  main article#article2 section#art2_sec2 h5{
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+
+  main article#article2 section#art2_sec3 > p{
+    width: 600px;
+  }
+
+  main article#article3{
+    flex-direction: column;
+  }
+
+  main article#article3 section > div > h1.topic{
+    width: 100%;
+    padding-left: 35%;
+  }
+
+  main article#article3 section > div > h1.topic::before{
+    width: 20vw;
+    min-width: 8%;
+  }
+
+  main article#article3 section > p{
+    width: 600px;
+    margin: 10px auto;
+  }
+
+  main article#article3 section a#art3_text{
+    margin-left: 43%;
+  }
+
+  main article#article3 section ul#art3_link li a{
+    border-width: 5px;
+    width: 295px;
+    height: 384px;
+  }
+
+  main article#article3 section ul#art3_link li:first-child a.img{
+    background-position-x: -100px;
+  }
+
+  main article#article3 section ul#art3_link li:nth-child(2) a.img{
+    background-position-x: -120px;
+  }
+
+  main article#article3 section ul#art3_link li:nth-child(3) a.img{
+    background-position-x: -300px;
+  }
+
+  main article#article3 section ul#art3_link li:hover a.img{
+    border-width: 5px;
+  }
+
+  main article#article3 section a#art3_button1{
+    top: 370px;
+    left: -400px;
+  }
+
+  main article#article3 section a#art3_button2{
+    right: -120px;
+    top: 370px;
+  }
+
+  main article#article3 section ul#art3_link li p.text{
+    padding: 20px 20px;
+    font-size: 18px;
+  }
+
+  main article#article4 section div > h1.topic::after{
+    min-width: 220px;
+  }
+
+  main article#article4 h2{
+    font-size: 28px;
+  }
+
+
+  main article#article4 section#art4_sec4  ul#art4_link{
+    background-position-y: 0px;
+  }
+
+  main article#article4 section#art4_sec4  ul#art4_link > li{
+    width: 50%;
+  }
+
+  main article#article4 section#art4_sec4  ul#art4_link > li:last-child{
+    width: 100%;
+  }
+
+  main article#article4 section#art4_sec4  ul#art4_link > li:nth-child(3):hover > ul li a, main article#article4 section#art4_sec4  ul#art4_link > li:nth-child(4):hover > ul li a, main article#article4 section#art4_sec4  ul#art4_link > li:last-child:hover > ul li a{
+    color: black;
+  }
+
+  main article#article4 section#art4_sec4  ul#art4_link li:nth-child(3):hover > ul, main article#article4 section#art4_sec4  ul#art4_link li:nth-child(4):hover > ul, main article#article4 section#art4_sec4  ul#art4_link li:last-child:hover > ul{
+    background-color: rgba(255, 255, 255, .4);
+  }
+
+  main article#article4 section#art4_sec4 ul#art4_link li:nth-child(3):hover ul li.intro, main article#article4 section#art4_sec4 ul#art4_link li:nth-child(4):hover ul li.intro, main article#article4 section#art4_sec4 ul#art4_link li:last-child:hover ul li.intro{
+    color: black;
+    font-weight: 700;
+  }
+
+  main article#article4 section#art4_sec4  ul#art4_link li ul li.intro{
+    width: 100%;
+    margin: auto;
+  }
+
+  main article#article4 section#art4_sec4 ul#art4_link li ul li.arrow a::before{
+    left: 42%;
+  }
+
+  main article#article4 section#art4_sec4 ul#art4_link li:nth-child(3) ul li.arrow a::before, main article#article4 section#art4_sec4 ul#art4_link li:nth-child(4) ul li.arrow a::before{
+    left: 42%;
+  }
+
+  main article#article4 section#art4_sec4 ul#art4_link li:last-child ul li.arrow a::before{
+    left: 46%;
+  }
+
+  main article#article5 div{
+    width: 750px;
+  }
+
+  main article#article5 div h2{
+    top: -30px;
+    left: 120px;
+  }
+
+  main article#article5 div p{
+    width: 80%;
+    padding: 40px 20px 70px;
+    padding-right: 5%;
+    margin-left: 70px;
+  }
+
+  main article#article5 a{
+    right: 140px;
+    top: 85px;
+  }
+}
+
+/* 992 - 1199 */
+@media screen and (min-width: 992px) and (max-width: 1199px){
+  .animation_title .letter {
+    /* line-height: 1rem; */
+    display: inline-block;
+    font-size: 70px;
+  }
+  
+  header form.banner_track{
+    margin-top: 250px;
+  }
+
+  header div.banner_news em p.banner_news_title{
+    width: 600px;
+    margin-top: 150px;
+  }
+
+  main article#article1{
+    padding-bottom: 60px;
+  }
+
+  main article#article1 section > div{
+    padding-right: 20%;
+  }
+
+  main article#article1 section > div h1.topic{
+    width:100%;
+    max-width: 850px;
+    padding-left: 25%;
+  }
+
+  main article#article1 section p#art1_intro{
+    width: 80%;
+    padding: 30px;
+  }
+
+  main article#article1 section ul#art1_link > li > div a.art_link_text{
+    padding: 15px 20px;
+    padding-left: 20px;
+    font-size: 18px;
+  }
+
+  main article#article1 section ul#art1_link > li > div a.art_link_text::before{
+    font-size: 22px;
+  }
+
+  main article#article1 section ul#art1_link > li > div a#art_link_text_lb{
+    right: -70px;
+    top: 200px;
+  }
+  
+  main article#article1 section ul#art1_link > li > div a#art_link_text_rb{
+    right: -100px;
+    top: 200px;
+  }
+  
+  main article#article1 section ul#art1_link > li > div a#art_link_text_mid{
+    right: -100px;
+    top: 200px;
+  }
+
+  main article#article1 section ul#art1_link li > div > div a.art1_link_img,main article#article1 section ul#art1_link li > div > div a.cover{
+    border: 6px solid #ff4400;
+    width: 280px;
+    height: 280px;
+  }
+
+  main article#article2 ul.art2_imgshow > li.img{
+    width: 767px;
+    height: 356px;
+  }
+
+  main article#article2 ul.art2_imgshow > li span#span1{
+    left:120px;
+  }
+
+  main article#article2 ul.art2_imgshow > li span#span2{
+    right: 120px;
+  }
+
+  main article#article2 section#art2_sec2 h4{
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+
+  main article#article2 section#art2_sec2 > div.container{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main article#article2 section#art2_sec2 div > div ul#art2_browse {
+    width: 800px;
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+
+  main article#article2 section#art2_sec2 div > div ul#art2_browse > li{
+    margin: 10px 20px 30px;
+  }
+
+  main article#article2 section#art2_sec2 div > div > ul > li h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  
+  main article#article2 section#art2_sec2 h5{
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+
+  main article#article2 section ul.art2_quality{
+    margin-top: 10px;
+    display: inline-block;
+  }
+  
+  main article#article2 section ul.art2_quality li{
+    width: 200px;
+    margin: auto 10px;
+  }
+
+  main article#article2 section ul.art2_quality li img{
+    width: 200px;
+    height: 200px;
+  }
+  
+  main article#article2 section ul.art2_quality li p{
+    width: 200px;
+  }
+
+  main article#article3 section > div > h1.topic{
+    width: 400px;
+    padding-left: 22%;
+  }
+
+  main article#article3 section > div > h1.topic::before{
+    width: 6vw;
+    min-width: 8%;
+  }
+
+  main article#article3 section > p{
+    margin-left: 100px;
+  }
+
+  main article#article3 section a#art3_text{
+    margin-left: 100px;
+  }
+
+  main article#article3 section ul#art3_link li a{
+    width: 368px;
+    height: 480px;
+  }
+
+  main article#article3 section a#art3_button1{
+    left: 200px;
+  }
+
+  main article#article3 section a#art3_button2{
+    right: -550px;
+  }
+
+  main article#article3 section ul#art3_link li p.text{
+    padding: 30px 40px;
+  }
+
+  main article#article4 h2{
+    font-size: 30px;
+  }
+
+  main article#article4 section#art4_sec4  ul#art4_link{
+    background-position-y: 0px;
+  }
+
+  main article#article4 section#art4_sec4  ul#art4_link > li{
+    width: 33.3%;
+  }
+
+  main article#article4 section#art4_sec4  ul#art4_link > li:nth-child(4),   main article#article4 section#art4_sec4  ul#art4_link > li:last-child{
+    width: 50%;
+  }
+
+  main article#article4 section#art4_sec4  ul#art4_link > li:nth-child(4):hover > ul li a, main article#article4 section#art4_sec4  ul#art4_link > li:last-child:hover > ul li a{
+    color: black;
+  }
+
+  main article#article4 section#art4_sec4  ul#art4_link li:nth-child(4):hover > ul, main article#article4 section#art4_sec4  ul#art4_link li:last-child:hover > ul{
+    background-color: rgba(255, 255, 255, .4);
+  }
+
+  main article#article4 section#art4_sec4 ul#art4_link li:nth-child(4):hover ul li.intro, main article#article4 section#art4_sec4 ul#art4_link li:last-child:hover ul li.intro{
+    color: black;
+    font-weight: 700;
+  }
+
+  main article#article4 section#art4_sec4  ul#art4_link li ul li.intro{
+    width: 100%;
+    margin: auto;
+  }
+
+  main article#article4 section#art4_sec4 ul#art4_link li ul li.arrow a::before{
+    left: 40%;
+  }
+
+  main article#article4 section#art4_sec4 ul#art4_link li:nth-child(4) ul li.arrow a::before, main article#article4 section#art4_sec4 ul#art4_link li:last-child ul li.arrow a::before{
+    left: 43.5%;
+  }
+
+  main article#article5 div{
+    width: 900px;
+  }
+
+  main article#article5 div h2{
+    top: -30px;
+    left: 180px;
+  }
+
+  main article#article5 div p{
+    width: 80%;
+    padding: 40px 100px 70px;
+    padding-right: 6%;
+    margin-left: 90px;
+  }
+
+  main article#article5 a{
+    right: 185px;
+    top: 85px;
+  }
 }
